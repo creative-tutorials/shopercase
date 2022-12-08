@@ -10,7 +10,7 @@ function HomePage() {
     setactive(true);
   };
   useEffect(() => {
-    limit++;
+    setlimit(limit++)
     limit > 1 ? console.log("limit reached") : FetchProductsFromAPI();
   }, []);
 
