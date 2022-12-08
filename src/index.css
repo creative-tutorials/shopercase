@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-choice), sans-serif;
+}
+:root {
+  --ligth-theme: #ffffff;
+  --dark-theme: #1b2430;
+  --dark-theme2: #212c3a;
+  --font-choice: "Poppins";
+  --grey-color: #424242;
+}
+body {
+  background-color: var(--ligth-theme);
+}

@@ -1,0 +1,97 @@
+#login_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.viewbx_wrapper {
+  padding: 30px;
+  /* background-color: red; */
+  border-radius: 5px;
+}
+.viewbx_wrapper .viewbx_header h2 {
+  font-size: 1.9rem;
+}
+.viewbx_wrapper .viewbx_header p {
+  font-weight: 500;
+  color: var(--grey-color);
+}
+#input_wrapper {
+  margin-top: 10px;
+  width: 100% !important;
+  /* background-color: red; */
+}
+#input_wrapper input {
+  width: 100%;
+  height: 45px;
+  padding-left: 46px;
+  border: 2px solid #bfbfbf;
+  outline: none;
+  border-radius: 3px;
+}
+#input_wrapper input:is(:active, :focus) {
+  caret-color: #5e4f00;
+  border-color: #5e4f00;
+}
+#input_wrapper {
+  position: relative;
+}
+#input_wrapper i#left {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: #bfbfbf;
+}
+#input_wrapper i#right {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #bfbfbf;
+}
+#button_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+#button_wrapper button {
+  width: 100px;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #ffbf00;
+  cursor: pointer;
+}
+#button_wrapper button:is(:hover) {
+  background-color: #f5c022;
+  /* color: ; */
+}
+#button_wrapper button i {
+  transition: all 0.3s ease;
+}
+#button_wrapper button:hover i {
+  transform: translateX(5px);
+}
+#pager {
+    text-align: center;
+}
+#pager p {
+    margin-top: 20px;
+    font-weight: 500;
+}
+#pager p a {
+    text-decoration: none;
+    color: black;
+}
+#pager p a:hover {
+    text-decoration: underline;
+    color: #5e4f00;
+}
+#ifo p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #413512;
+}
