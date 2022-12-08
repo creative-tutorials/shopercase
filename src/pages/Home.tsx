@@ -1,13 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
 import { Sidebar } from "../components/class/Sidebar";
-import { Product } from "../components/client/Product";
+import { FetchProductsFromAPI } from "../functions/fetchproducts";
 import { Link } from "react-router-dom";
 import "../styles/home.css";
 import { useState, useEffect, useRef } from "react";
 function HomePage() {
   const [active, setactive] = useState(false);
-  const data: any = useRef(null);
   let [limit, setlimit] = useState(0);
   const setSidebarActive = () => {
     setactive(true);
@@ -15,36 +12,6 @@ function HomePage() {
   useEffect(() => {
     limit++;
     limit > 1 ? console.log("limit reached") : FetchProductsFromAPI();
-    async function FetchProductsFromAPI() {
-      try {
-        const response = await fetch("http://localhost:8080/admin/products", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            apikey: import.meta.env.VITE_API_KEY,
-          },
-        });
-
-        if (response.ok) {
-          const result = await response.json();
-          console.log(result);
-          //   setdata(result);
-          data.current = result;
-          result.map((item: any, index: any) => {
-            console.log(item, index);
-            ReactDOM.createRoot(
-              document.getElementById("products") as HTMLElement
-            ).render(
-              <React.StrictMode>
-                <Product result={result} />
-              </React.StrictMode>
-            );
-          });
-        }
-      } catch (err) {
-        console.error(err);
-      }
-    }
   }, []);
 
   return (
