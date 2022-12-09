@@ -1,6 +1,5 @@
 #sidebar {
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
   position: fixed;
   padding: 30px;
@@ -43,7 +42,6 @@
 }
 #sidebar #btm {
   width: 100%;
-  /* background-color: red; */
   margin-top: auto;
 }
 #sidebar #btm h6 {
