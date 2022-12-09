@@ -1,23 +1,21 @@
-import { lazy, Suspense, useState } from "react";
-import "./App.css";
+import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const LoginComponent = lazy(() => import("./components/auth/Login"));
 const SignUpComponent = lazy(() => import("./components/auth/Signup"));
-const UploadPage = lazy(() => import("./components/admin/upload"));
+const AdminDashboard = lazy(() => import("./components/admin/dashboard"));
 const HomePage = lazy(() => import("./pages/Home"));
+import Loader from "./components/class/Loader";
 import ProtectedRoute from "./ProtectedRoute";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
       <Router>
-        <Suspense fallback={<h1>Loading...</h1>}>
+        <Suspense fallback={<Loader />}>
           <Routes>
             <Route element={<ProtectedRoute />}>
               <Route path="/" element={<HomePage />}></Route>
-              <Route path="/upload" element={<UploadPage />}></Route>
+              <Route path="/dashboard" element={<AdminDashboard />}></Route>
             </Route>
             <Route path="/login" element={<LoginComponent />}></Route>
             <Route path="/register" element={<SignUpComponent />}></Route>
