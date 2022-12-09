@@ -3,10 +3,11 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 .viewbx_wrapper {
   padding: 30px;
-  /* background-color: red; */
   border-radius: 5px;
 }
 .viewbx_wrapper .viewbx_header h2 {

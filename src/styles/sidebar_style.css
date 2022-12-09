@@ -8,7 +8,8 @@
   right: -400px;
   width: 100%;
   max-width: 400px;
-  background-color: #181818;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
   height: 100%;
   transition: all 0.3s cubic-bezier(1, 0.76, 0.21, 0.66);
 }

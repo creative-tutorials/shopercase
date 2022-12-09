@@ -35,7 +35,9 @@ function LoginComponent() {
           </button>
         </div>
         <div id={lign.pager}>
-          <p>Don't have an account yet? <Link to={'/register'}>create one</Link></p>
+          <p>
+            Don't have an account yet? <Link to={"/register"}>create one</Link>
+          </p>
         </div>
         <div id={lign.ifo}>
           <p>

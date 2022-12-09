@@ -2,7 +2,6 @@ export function Product({ result }: any) {
   return (
     <div id="product-flex">
       {result.map(function (item: any, index: any) {
-        item.productID = "*****"
         return (
           <div id="items" key={index}>
             <div id="item-image">
@@ -27,4 +26,6 @@ export function Product({ result }: any) {
       })}
     </div>
   );
+
+
 }
