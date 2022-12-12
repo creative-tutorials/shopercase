@@ -6,7 +6,7 @@ export function Product({ result }: any) {
           <div id="items" key={index}>
             <div id="item-image">
               <img
-                src="h1-product-3-550x550.jpg"
+                src={item.productImage}
                 alt=""
                 loading="lazy"
                 width={300}

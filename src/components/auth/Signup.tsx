@@ -15,7 +15,6 @@ function SignUpComponent() {
     const Bdate = DOB_input_value.current.value;
     const Bday = +new Date(Bdate);
     const result = +~~((Date.now() - Bday) / 31557600000);
-    console.log("result", result);
     age_storage.current = result;
   }
   const HandleAuthentication = async () => {

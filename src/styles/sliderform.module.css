@@ -9,7 +9,7 @@
   height: 100%;
   max-width: 500px;
   background-color: #fff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
   padding: 25px;
   transition: all 0.3s cubic-bezier(0.88, 0.81, 0.09, 0.58);
 }
@@ -63,6 +63,34 @@
   border-radius: 5px;
   color: black;
   transition: all 0.3s ease;
+}
+#tp_bx_rt #upload_btn {
+  width: 300px;
+  padding: 15px;
+  outline: none;
+  border: 2px dashed #f3c848 !important;
+  background: transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+#tp_bx_rt #upload_btn:hover {
+  color: #f3c848;
+}
+#tp_bx_rt {
+  display: flex;
+  flex-direction: column;
+}
+#tp_bx_rt:has(span) {
+  color: rgb(153, 132, 75);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: flex-end;
+}
+#tp_bx_rt span::selection {
+  background-color: #f3c848;
+  color: black;
 }
 #tp_bx_rt input:is(:active, :focus) {
   background-color: transparent;
