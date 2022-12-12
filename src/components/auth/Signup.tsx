@@ -3,56 +3,61 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { StoreSession } from "../../functions/StoreSession";
 import lign from "../../styles/loginstyle.module.css";
+import { checkPswrdTypeState } from "../../functions/checkPswrdTypeState";
 function SignUpComponent() {
   const FullName_input_value: any = useRef(),
-    Email_input_value: any = useRef(),
-    Password_input_value: any = useRef(),
+    Email: any = useRef(),
+    Password: any = useRef(),
     DOB_input_value: any = useRef(),
     age_storage: any = useRef(null);
+
   const [errorMessage, seterrorMessage] = useState(null),
     [toastisActive, settoastisActive] = useState(false);
+
+  const [isTypeText, setisTypeText] = useState(false);
+  const CheckPswrdTypeState = checkPswrdTypeState(Password, setisTypeText);
+
   function CheckForAge() {
     const Bdate = DOB_input_value.current.value;
     const Bday = +new Date(Bdate);
     const result = +~~((Date.now() - Bday) / 31557600000);
     age_storage.current = result;
   }
+
   const HandleAuthentication = async () => {
     const fullName = FullName_input_value.current.value;
-    const Email = Email_input_value.current.value;
-    const Password = Password_input_value.current.value;
-    if (age_storage.current == null) {
-      return null;
-    } else {
-      try {
-        const response = await fetch("http://localhost:8080/signup", {
-          method: "POST",
-          headers: {
-            apikey: import.meta.env.VITE_API_KEY,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            fullname: fullName,
-            email: Email,
-            password: Password,
-            age: age_storage.current,
-          }),
-        });
+    const EmailValue = Email.current.value;
+    const PasswordValue = Password.current.value;
+    if (age_storage.current == null)
+      alert("Please select from the input a date for your age");
+    try {
+      const response = await fetch("http://localhost:8080/signup", {
+        method: "POST",
+        headers: {
+          apikey: import.meta.env.VITE_API_KEY,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullname: fullName,
+          email: EmailValue,
+          password: PasswordValue,
+          age: age_storage.current,
+        }),
+      });
 
-        if (response.ok) {
-          const result = await response.json();
-          StoreSession(result);
-        } else {
-          const result = await response.json();
-          settoastisActive(true);
-          setTimeout(() => {
-            settoastisActive(false);
-          }, 4500);
-          seterrorMessage(result.message);
-        }
-      } catch (err) {
-        console.error(err);
+      if (response.ok) {
+        const result = await response.json();
+        StoreSession(result);
+      } else {
+        const result = await response.json();
+        settoastisActive(true);
+        setTimeout(() => {
+          settoastisActive(false);
+        }, 4500);
+        seterrorMessage(result.message);
       }
+    } catch (err) {
+      console.error(err);
     }
   };
   return (
@@ -80,21 +85,25 @@ function SignUpComponent() {
             id="email"
             placeholder="enter your email address"
             autoComplete="off"
-            ref={Email_input_value}
+            ref={Email}
           />
           <i className="fa-regular fa-envelope" id={lign.left}></i>
         </div>
         <div id={lign.input_wrapper}>
           <input
-            type="password"
+            type={isTypeText ? "text" : "password"}
             name="password"
             id="password"
             placeholder="enter password"
             autoComplete="off"
-            ref={Password_input_value}
+            ref={Password}
           />
           <i className="fa-regular fa-lock" id={lign.left}></i>
-          <i className="fa-solid fa-eye" id={lign.right}></i>
+          <i
+            className={isTypeText ? "fa-solid fa-eye-slash" : "fa-solid fa-eye"}
+            onClick={CheckPswrdTypeState}
+            id={lign.right}
+          ></i>
         </div>
         <div id={lign.input_wrapper}>
           <input
