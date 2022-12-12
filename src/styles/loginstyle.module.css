@@ -20,7 +20,7 @@
 #input_wrapper {
   margin-top: 10px;
   width: 100% !important;
-  /* background-color: red; */
+  position: relative;
 }
 #input_wrapper input {
   width: 100%;
@@ -48,6 +48,7 @@
   top: 15px;
   right: 20px;
   color: #bfbfbf;
+  cursor: pointer;
 }
 #button_wrapper {
   display: flex;
