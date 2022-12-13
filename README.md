@@ -111,7 +111,7 @@ To contribute please make sure you follow our [contribution guidelines](CONTRIBU
 
 Feel free to check the [issues page](https://github.com/creative-tutorials/shopercase/issues)
 
-> **NOTE:** Please don't forget to star this project 
+> **Note**: Please don't forget to star this project 
 
 ## 📝 License
 
