@@ -30,30 +30,30 @@ Shopercase App is a simple and secure platform for online shopping. With our app
 
 <li>
 
-[Why choose shopercase](#why-choose-us)
+[Why choose shopercase](#🔍-why-choose-us)
 
 </li>
 
 <li>
 
-[Safety Measures](#safety-measures)
+[Safety Measures](#🔐-safety-measures)
 
 </li>
 
 <li>
 
-[Features](#features)
+[Features](#🧪-features)
 
 </li>
 
 <li>
 
-[Technologies](#technologies)
+[Technologies](#🛠-technologies)
 
 </li>
 <li>
 
-[Contributing](#contributing)
+[Contributing](#👪-contributing)
 
 </li>
 </ol>
