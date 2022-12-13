@@ -111,6 +111,8 @@ To contribute please make sure you follow our [contribution guidelines](CONTRIBU
 
 Feel free to check the [issues page](https://github.com/creative-tutorials/shopercase/issues)
 
+> **NOTE:** Please don't forget to star this project 
+
 ## 📝 License
 
 This Project is licensed under the [Apache-2.0 license](LICENSE)
