@@ -1,6 +1,9 @@
 <div align="center">
   
-# Shopercase
+<img src="https://user-images.githubusercontent.com/68476321/207319652-d1eb663c-f34c-4f75-8962-3122d14ff572.png" alt="Pink_Retro_Boho_Beauty_Blogger_Name_Logo-removebg-preview" width="200px" height="200px" />
+
+# Shopercase Frontend
+
 </div>
 
 <div align="left">
@@ -8,81 +11,106 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/creative-tutorials/shopercase?style=flat-square)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/creative-tutorials/shopercase/master?color=blue&style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/creative-tutorials/shopercase?color=blue&style=flat-square)
+
 </div>
 
 <div align="center">
   
-Shop with confidence
+**Shop with confidence**
 </div>
 
 Shopercase App is a simple and secure platform for online shopping. With our app, you can easily browse and purchase products from your favorite stores, track your orders, and manage your payment and shipping information. We use the latest technologies to ensure the safety and privacy of your personal and financial data, so you can shop with confidence.
 
-
 <!-- details -->
-
+# 📘 Table of Contents
 <details>
-<summary><b>FAQ</b></summary>
+<summary>Click here</summary>
 
 <ol>
 
 <li>
 
 [Why choose shopercase](#why-choose-us)
+
 </li>
 
 <li>
 
 [Safety Measures](#safety-measures)
+
 </li>
 
 <li>
 
 [Features](#features)
+
 </li>
 
 <li>
 
 [Technologies](#technologies)
+
 </li>
 <li>
 
 [Contributing](#contributing)
+
 </li>
 </ol>
 </details>
 
+## 🔍 Why Choose Us?
 
-## Why Choose Us?
 Shopercase helps connect both the customer and the retailer together, we've a vision of allowing the customer to communicate with the retailer, and vice versa.
 
 I launch this platform to make sure the customer and the retailer gets what they want without any problems like waiting for the product to land, and worrying about spending money on something you didn't get on time.
 
-## Safety Measures
+## 🔐 Safety Measures
+
 Sopercase is trying everything possible to make sure you are end-to-end-ecrypted, which means whatever you do is secured.
 
 Shopercase is taking the approcach to encrypt all data been sent to the server. passwords, email addresses are encrypted and stored in a separate **file**, which means it's a **file** accessed by the owner of the **file**. we can't totally gurantee that the **file** won't be breached, but we are trying everything possible to make sure that the **file** will be secured & encrypted to prevent any hack attempt.
 
-## Features
+## 🧪 Features
 
-* Browse and search for products from multiple stores
-* Add items to your shopping cart and checkout securely
-* View and track your orders
-* Manage your payment and shipping information
-* Receive notifications about new products and sales
+- Browse and search for products from multiple stores
+- Add items to your shopping cart and checkout securely
+- View and track your orders
+- Manage your payment and shipping information
+- Receive notifications about new products and sales
 
-## Technologies
+## 🛠 Technologies
 
-* React for the frontend user interface
-* Node.js and Express for the backend API
-* MongoDB for the database
-* Stripe for secure payment processing
-* SendGrid for email notifications
+- React for the frontend user interface
+- Node.js and Express for the backend API & Server
+- MongoDB for the database
+- Stripe for secure payment processing
+- SendGrid for email notifications
 
-## Contributing
+## 👪 Contributing
 
 To use Ecommerce App, you will need to have Node.js and MongoDB installed on your machine. Follow these steps to get started:
 
 1. Clone the repository: `git clone https://github.com/username/ecommerce-app.git`
 1. Install the dependencies: `npm install`
-2. Create a `.env` file and set the necessary environment variables.
-3. Start the development server: `npm start`
+1. Create a `.env` file and set the necessary environment variables.
+1. Start the development server: `npm start`
+
+
+## 👤 Author
+
+### Thanks to all our contributors.
+
+> No data available
+
+## ⭐ Show your support
+
+Contributions, issues, and feature requests are welcome!
+
+To contribute please make sure you follow our [contribution guidelines](CONTRIBUTING.md)
+
+Feel free to check the [issues page](https://github.com/creative-tutorials/shopercase/issues)
+
+## 📝 License
+
+This Project is licensed under the [Apache-2.0 license](LICENSE)
