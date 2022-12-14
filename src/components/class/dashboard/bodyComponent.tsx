@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { useState, useEffect, useRef } from "react";
-import { DashboardProduct } from "./dashproduct";
+import { FecthProductData } from "./fetchproducts";
 export function BodyComponent({ dshstyle, setSliderFormActive }: any) {
   const [isrendered, setisrendered] = useState(false);
   const AddProduct = () => {
@@ -23,7 +23,7 @@ export function BodyComponent({ dshstyle, setSliderFormActive }: any) {
           document.getElementById(dshstyle.dh4_container) as HTMLElement
         ).render(
           <React.StrictMode>
-            <DashboardProduct result={result} dshstyle={dshstyle} />
+            <FecthProductData result={result} dshstyle={dshstyle} />
           </React.StrictMode>
         );
       }
