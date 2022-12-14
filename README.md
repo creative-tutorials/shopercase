@@ -30,30 +30,30 @@ Shopercase App is a simple and secure platform for online shopping. With our app
 
 <li>
 
-[Why choose shopercase](#🔍-why-choose-us)
+[Why choose shopercase](#-why-choose-us)
 
 </li>
 
 <li>
 
-[Safety Measures](#🔐-safety-measures)
+[Safety Measures](#-safety-measures)
 
 </li>
 
 <li>
 
-[Features](#🧪-features)
+[Features](#-features)
 
 </li>
 
 <li>
 
-[Technologies](#🛠-technologies)
+[Technologies](#-technologies)
 
 </li>
 <li>
 
-[Contributing](#👪-contributing)
+[Contributing](#-contributing)
 
 </li>
 </ol>
@@ -69,7 +69,7 @@ I launch this platform to make sure the customer and the retailer gets what they
 
 Sopercase is trying everything possible to make sure you are end-to-end-ecrypted, which means whatever you do is secured.
 
-Shopercase is taking the approcach to encrypt all data been sent to the server. passwords, email addresses are encrypted and stored in a separate **file**, which means it's a **file** accessed by the owner of the **file**. we can't totally gurantee that the **file** won't be breached, but we are trying everything possible to make sure that the **file** will be secured & encrypted to prevent any hack attempt.
+Shopercase is taking the approcach to encrypt all data been sent to the server. passwords, email addresses are encrypted and stored in a separate **file**, which means it's a **file** accessed by the owner of the **file** - that's you. We are trying everything possible to make sure that the **file** will be secured & encrypted to prevent any hack attempt.
 
 ## 🧪 Features
 
@@ -89,12 +89,15 @@ Shopercase is taking the approcach to encrypt all data been sent to the server. 
 
 ## 👪 Contributing
 
-To use Ecommerce App, you will need to have Node.js and MongoDB installed on your machine. Follow these steps to get started:
+To contribute to this project please read the following. 👇
 
-1. Clone the repository: `git clone https://github.com/username/ecommerce-app.git`
-1. Install the dependencies: `npm install`
-1. Create a `.env` file and set the necessary environment variables.
-1. Start the development server: `npm start`
+1. Clone the repository: `https://github.com/creative-tutorials/shopercase.git`
+2. Install the dependencies: `yarn install`
+3. Create a `.env` file and set the necessary environment variables.
+4. Start the development server: `yarn run dev`
+
+> **Note**: You must read the [contribution guidelines](CONTRIBUTING.md) before contributing to the project.
+> **Note**: Since I'm using yarn here you should probably have node installed and running, then install yarn before running the development server.
 
 
 ## 👤 Author
