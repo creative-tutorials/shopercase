@@ -97,6 +97,7 @@ To contribute to this project please read the following. 👇
 4. Start the development server: `yarn run dev`
 
 > **Note**: You must read the [contribution guidelines](CONTRIBUTING.md) before contributing to the project.
+
 > **Note**: Since I'm using yarn here you should probably have node installed and running, then install yarn before running the development server.
 
 
