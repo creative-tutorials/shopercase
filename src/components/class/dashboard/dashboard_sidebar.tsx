@@ -4,7 +4,7 @@ export function Dashboard_sidebar({ dshstyle }: any) {
     <div id={dshstyle.dashboard_sidebar}>
       <div id={dshstyle.dshbrd_sdebr_tp_cnt}>
         <div id={dshstyle.sidebar_header}>
-          <h3>Shopp'r case</h3>
+          <h3>Shopper case</h3>
         </div>
         <LinksComponent dshstyle={dshstyle} />
       </div>
