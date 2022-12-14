@@ -1,8 +1,41 @@
-import { useState } from "react";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { useState, useEffect, useRef } from "react";
+import { DashboardProduct } from "./dashproduct";
 export function BodyComponent({ dshstyle, setSliderFormActive }: any) {
+  const [isrendered, setisrendered] = useState(false);
   const AddProduct = () => {
     setSliderFormActive(true);
   };
+  const fetchproductsdata = async () => {
+    try {
+      const response = await fetch("http://localhost:8080/admin/products", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: import.meta.env.VITE_API_KEY,
+        },
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        ReactDOM.createRoot(
+          document.getElementById(dshstyle.dh4_container) as HTMLElement
+        ).render(
+          <React.StrictMode>
+            <DashboardProduct result={result} dshstyle={dshstyle} />
+          </React.StrictMode>
+        );
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  let current = 0;
+  useEffect(() => {
+    current++;
+    current > 1 ? fetchproductsdata() : null;
+  }, []);
   return (
     <div id={dshstyle.dashboard_body}>
       <div id={dshstyle.dtp}>
@@ -30,24 +63,7 @@ export function BodyComponent({ dshstyle, setSliderFormActive }: any) {
           <span>Price</span>
           <span>Actions</span>
         </div>
-        <div id={dshstyle.dh4_container}>
-          <div id={dshstyle.dh4}>
-            <span>01234</span>
-            <span>Macbook Air</span>
-            <span>$200</span>
-            <span>
-              <i className="fa-regular fa-trash"></i>
-            </span>
-          </div>
-          <div id={dshstyle.dh4}>
-            <span>01234</span>
-            <span>Macbook Air</span>
-            <span>$200</span>
-            <span>
-              <i className="fa-regular fa-trash"></i>
-            </span>
-          </div>
-        </div>
+        <div id={dshstyle.dh4_container}></div>
       </div>
     </div>
   );
