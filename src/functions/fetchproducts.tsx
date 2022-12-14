@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Product } from "../components/client/Product";
-import { HideProductID } from "./HideProductID";
 export async function FetchProductsFromAPI() {
   try {
     const response = await fetch("http://localhost:8080/admin/products", {
@@ -14,16 +13,13 @@ export async function FetchProductsFromAPI() {
 
     if (response.ok) {
       const result = await response.json();
-      result.map((item: any, index: any) => {
-        HideProductID(item);
-        ReactDOM.createRoot(
-          document.getElementById("products") as HTMLElement
-        ).render(
-          <React.StrictMode>
-            <Product result={result} />
-          </React.StrictMode>
-        );
-      });
+      ReactDOM.createRoot(
+        document.getElementById("products") as HTMLElement
+      ).render(
+        <React.StrictMode>
+          <Product result={result} />
+        </React.StrictMode>
+      );
     }
   } catch (err) {
     console.error(err);

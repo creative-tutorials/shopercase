@@ -4,7 +4,7 @@
   width: 100%;
   padding: 25px;
   background-color: #fff;
-  box-shadow: 0px 8px 15px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 83px -66px rgba(0,0,0,0.1);
 }
 #col-header-flex {
   width: 100%;
@@ -131,14 +131,27 @@
   justify-content: center;
   flex-direction: column;
 }
+#products #item-image {
+  position: relative;
+  width: 320px;
+}
+#products #item-hover {
+  position: absolute;
+  bottom: 6px;
+  width: inherit;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.497);
+  backdrop-filter: blur(8px) !important;
+}
 #products #items #item-name {
   font-size: 1.2rem;
   font-weight: 500;
+  color: #fff;
 }
 #products #items #item-price {
   font-size: 1rem;
   font-weight: 500;
-  color: #3c4048;
+  color: #b5b8c2;
 }
 :is(#item-name, #item-price) {
   display: flex;
@@ -154,20 +167,21 @@
 }
 #products #items #buttons #add-to-cart {
   width: 100%;
-  height: 45px;
+  padding: 10px;
   background: transparent;
-  border: 2px solid #3c4048;
+  border: 2px solid #fff;
   border-radius: 5px;
   outline: none;
-  color: #3c4048;
+  color: #fff;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 #products #items #buttons #add-to-cart:hover {
-  background-color: #3c4048;
-  color: #f2f4f9;
+  background-color: #fff;
+  color: #1f2125;
+  font-weight: 600;
 }
 #products #items #buttons #purchase {
   width: 100%;
@@ -176,9 +190,9 @@
   margin-left: 30px;
   border: none;
   outline: none;
-  color: #3c4048;
+  color: #fff;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
 }
 #products #items #buttons #purchase:hover {

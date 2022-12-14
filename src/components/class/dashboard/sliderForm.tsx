@@ -24,6 +24,9 @@ export function SliderForm({ SliderFormActive, setSliderFormActive }: any) {
         cacheControl: "3600",
         upsert: false,
       });
+    if (!error) {
+      alert("Image Uploaded Successfully");
+    }
     /* Waiting for 2 seconds before it gets the public url of the image uploaded. */
     setTimeout(() => {
       async function getPublicURL() {
@@ -36,6 +39,8 @@ export function SliderForm({ SliderFormActive, setSliderFormActive }: any) {
     }, 2000);
   };
   const HandleAddProduct = async () => {
+    if (imageDataRef.current === undefined)
+      return alert("Please select a file");
     try {
       const response = await fetch("http://localhost:8080/products/create", {
         method: "POST",
