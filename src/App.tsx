@@ -1,8 +1,8 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-const LoginComponent = lazy(() => import("./components/auth/Login"));
-const SignUpComponent = lazy(() => import("./components/auth/Signup"));
-const AdminDashboard = lazy(() => import("./components/admin/dashboard"));
+const LoginComponent = lazy(() => import("./pages/auth/Login"));
+const SignUpComponent = lazy(() => import("./pages/auth/Signup"));
+const AdminDashboard = lazy(() => import("./pages/dashboard"));
 const HomePage = lazy(() => import("./pages/Home"));
 import Loader from "./components/class/Loader";
 import ProtectedRoute from "./ProtectedRoute";
