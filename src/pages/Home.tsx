@@ -26,6 +26,9 @@ function HomePage() {
   };
   const HandleLogout = () => {
     localStorage.removeItem("auth-session");
+    setTimeout(() => {
+      window.location.pathname = "/"
+    }, 2000);
   };
   const ShowDropDwnMenu = () => {
       setdropdwnActive(true);
@@ -56,7 +59,7 @@ function HomePage() {
           </div>
           <div id="header-title">
             <h3>
-              Shopp'r <span>case</span>
+              Shopper <span>case</span>
             </h3>
           </div>
           <div id="col-extra-header-links">
