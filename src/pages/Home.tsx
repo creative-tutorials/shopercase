@@ -27,7 +27,7 @@ function HomePage() {
   const HandleLogout = () => {
     localStorage.removeItem("auth-session");
     setTimeout(() => {
-      window.location.pathname = "/"
+      window.location.pathname = "/";
     }, 2000);
   };
   const ShowDropDwnMenu = () => {
@@ -36,6 +36,13 @@ function HomePage() {
     HideDropDwnMenu = () => {
       setdropdwnActive(false);
     };
+  const HandleFilteringData = () => {
+    try {
+      alert('This feature is still under development')
+    } catch (error) {
+      console.log('error')
+    }
+  };
   return (
     <div className="HomePage">
       <div className="col-header">
@@ -104,27 +111,34 @@ function HomePage() {
         </div>
       </div>
       <div id="page-body">
-        <div id="products">
-          {/* <div id="items">
-            <div id="item-image">
-              <img
-                src="h1-product-3-550x550.jpg"
-                alt=""
-                loading="lazy"
-                width={300}
-                height={300}
+        <div id="filter">
+          <div id="filter_tabs">
+            <span className="all-filter" data-filter="all">
+              All
+            </span>
+            <span className="instruments" data-filter="instruments">
+              instruments
+            </span>
+            <span className="music" data-filter="music">
+              music
+            </span>
+            <span className="home-appliance" data-filter="home-appliance">
+              Home Appliance
+            </span>
+          </div>
+          <div id="filter-search">
+            <div id="search-input">
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Enter Product name"
+                onChange={HandleFilteringData}
               />
             </div>
-            <div id="item-name">Lamp</div>
-            <div id="item-price">$200</div>
-            <div id="buttons">
-              <button id="add-to-cart">
-                <i className="fa-regular fa-cart-shopping"></i> Add to cart
-              </button>
-              <button id="purchase">Purchase</button>
-            </div>
-          </div> */}
+          </div>
         </div>
+        <div id="products"></div>
       </div>
       <Sidebar active={active} setactive={setactive} />
     </div>
