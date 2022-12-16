@@ -38,9 +38,9 @@ function HomePage() {
     };
   const HandleFilteringData = () => {
     try {
-      alert('This feature is still under development')
+      alert("This feature is still under development");
     } catch (error) {
-      console.log('error')
+      console.log("error");
     }
   };
   return (
@@ -110,7 +110,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div id="page-body">
+      <div id="page-body" className={dropdwnActive ? 'pg-active' : 'pg-inactive'}>
         <div id="filter">
           <div id="filter_tabs">
             <span className="all-filter" data-filter="all">
@@ -127,15 +127,13 @@ function HomePage() {
             </span>
           </div>
           <div id="filter-search">
-            <div id="search-input">
-              <input
-                type="text"
-                name=""
-                id=""
-                placeholder="Enter Product name"
-                onChange={HandleFilteringData}
-              />
-            </div>
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Enter Product name"
+              onChange={HandleFilteringData}
+            />
           </div>
         </div>
         <div id="products"></div>
