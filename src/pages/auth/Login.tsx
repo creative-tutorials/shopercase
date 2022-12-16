@@ -3,6 +3,7 @@ import { Toast } from "../../components/class/Toast";
 import { useState, useRef } from "react";
 import lign from "../../styles/loginstyle.module.css";
 import { checkPswrdTypeState } from "../../functions/checkPswrdTypeState";
+import { StoreSession } from "../../functions/StoreSession";
 function LoginComponent() {
   const [errorMessage, seterrorMessage] = useState(null),
     [toastisActive, settoastisActive] = useState(false);
@@ -27,6 +28,8 @@ function LoginComponent() {
 
       if (response.ok) {
         const result = await response.json();
+        StoreSession(result);
+        alert('Login Sucessful');
       } else {
         const result = await response.json();
         settoastisActive(true);
