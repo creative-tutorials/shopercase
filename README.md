@@ -119,4 +119,4 @@ Feel free to check the [issues page](https://github.com/creative-tutorials/shope
 
 ## 📝 License
 
-This Project is licensed under the [Apache-2.0 license](LICENSE)
+This Project is licensed under the [Apache-2.0 license](LICENSE).
