@@ -2,7 +2,7 @@
   
 <img src="https://user-images.githubusercontent.com/68476321/207319652-d1eb663c-f34c-4f75-8962-3122d14ff572.png" alt="Pink_Retro_Boho_Beauty_Blogger_Name_Logo-removebg-preview" width="200px" height="200px" />
 
-# Shopercase Frontend
+# Shopercase Web Frontend
 
 </div>
 
@@ -119,4 +119,4 @@ Feel free to check the [issues page](https://github.com/creative-tutorials/shope
 
 ## 📝 License
 
-This Project is licensed under the [Apache-2.0 license](LICENSE)
+This Project is licensed under the [Apache-2.0 license](LICENSE).
