@@ -68,7 +68,7 @@
   width: 300px;
   padding: 15px;
   outline: none;
-  border: 2px dashed #f3c848 !important;
+  border: 2px dashed var(--blue-fourth-color) !important;
   background: transparent;
   border-radius: 5px;
   font-size: 1rem;
@@ -76,14 +76,14 @@
   text-align: center;
 }
 #tp_bx_rt #upload_btn:hover {
-  color: #f3c848;
+  color: var(--blue-fourth-color);
 }
 #tp_bx_rt {
   display: flex;
   flex-direction: column;
 }
 #tp_bx_rt:has(span) {
-  color: rgb(153, 132, 75);
+  color: var(--blue-first-color);
   font-size: 0.8rem;
   display: flex;
   align-items: flex-end;
@@ -116,6 +116,6 @@
 }
 #form_body_bt button:last-child {
   margin-left: 20px;
-  background-color: #f3c848;
-  color: black;
+  background-color: var(--blue-fifth-color);
+  color: #fff;
 }

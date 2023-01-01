@@ -16,7 +16,7 @@
   grid-area: 1/1;
   border: 16px solid;
   border-radius: 50%;
-  border-color: #ffbf00 #ffbf00 #0000 #0000;
+  border-color: var(--blue-fourth-color) var(--blue-fourth-color) #0000 #0000;
   mix-blend-mode: darken;
   animation: s4 1s infinite linear;
 }

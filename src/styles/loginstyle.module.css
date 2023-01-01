@@ -31,8 +31,11 @@
   border-radius: 3px;
 }
 #input_wrapper input:is(:active, :focus) {
-  caret-color: #5e4f00;
-  border-color: #5e4f00;
+  caret-color: var(--blue-second-color);
+  border-color: var(--blue-second-color);
+}
+#input_wrapper input:is(:active, :focus) ~ i#left {
+  color: var(--blue-fourth-color);
 }
 #input_wrapper {
   position: relative;
@@ -63,12 +66,12 @@
   border-radius: 5px;
   font-weight: 600;
   font-size: 1rem;
-  background-color: #ffbf00;
+  background-color: var(--blue-fourth-color);
+  color: #fff;
   cursor: pointer;
 }
 #button_wrapper button:is(:hover) {
-  background-color: #f5c022;
-  /* color: ; */
+  background-color: var(--blue-fifth-color);
 }
 #button_wrapper button i {
   transition: all 0.3s ease;
@@ -77,23 +80,23 @@
   transform: translateX(5px);
 }
 #pager {
-    text-align: center;
+  text-align: center;
 }
 #pager p {
-    margin-top: 20px;
-    font-weight: 500;
+  margin-top: 20px;
+  font-weight: 500;
 }
 #pager p a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 #pager p a:hover {
-    text-decoration: underline;
-    color: #5e4f00;
+  text-decoration: underline;
+  color: var(--blue-fifth-color);
 }
 #ifo p {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #413512;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--blue-fourth-color);
 }

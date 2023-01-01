@@ -49,8 +49,7 @@ export function SliderForm({ SliderFormActive, setSliderFormActive }: any) {
           apikey: import.meta.env.VITE_API_KEY,
         },
         body: JSON.stringify({
-          email: parsedData.email,
-          password: parsedData.password,
+          session_key: parsedData.session_key,
           body: {
             product_name: nameRef.current.value,
             product_price: priceRef.current.value,

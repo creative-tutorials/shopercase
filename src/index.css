@@ -1,9 +1,15 @@
 :root {
-  --ligth-theme: #ffffff;
+  --ligth-theme: #F7F7FF;
   --dark-theme: #1b2430;
   --dark-theme2: #212c3a;
   --font-choice: "Poppins";
-  --grey-color: #424242;
+  --smokey-black-color: #070600;
+  --blue-first-color: #19647E;
+  --blue-second-color: #7CA5B8;
+  --blue-third-color: #38369A;
+  --blue-fourth-color: #6665DD;
+  --blue-fifth-color: #473BF0;
+
 }
 * {
   margin: 0;

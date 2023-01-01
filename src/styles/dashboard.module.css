@@ -33,7 +33,7 @@
   font-size: 1rem;
 }
 #sidebar_links a:hover {
-  color: #6d540b;
+  color: var(--blue-fifth-color);
 }
 #dshbrd_sdebr_btm_cnt {
   width: 100%;
@@ -44,13 +44,14 @@
   padding: 15px;
   outline: none;
   border: none;
-  background: #f3c848;
+  background: var(--blue-fifth-color);
+  color: #fff;
   border-radius: 5px;
   font-size: 1.1rem;
   font-weight: 500;
 }
 #logout_btn:hover {
-  background-color: rgb(245, 192, 34);
+  background-color: var(--blue-third-color);
   cursor: pointer;
 }
 #dashboard_body {
@@ -104,13 +105,14 @@
   border: none;
   background-color: none;
   border-radius: 5px;
-  background-color: #f3c848;
+  background-color: var(--blue-fifth-color);
+  color: #fff;
   font-weight: 500;
   font-size: 1.1rem;
   cursor: pointer;
 }
 #action_component #add_product button:hover {
-  background-color: rgb(245, 192, 34);
+  background-color: var(--blue-fourth-color);
 }
 #dbt {
   width: 100%;

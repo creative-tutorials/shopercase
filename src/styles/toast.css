@@ -1,11 +1,12 @@
 .toast {
   position: absolute;
-  padding: 10px 50px;
+  width: 400px;
+  padding: 20px;
   color: #721c24;
   background-color: #f8d7da;
   border: 1px solid;
   border-color: #f5c6cb;
-  right: -30%;
+  left: 2rem;
   bottom: 10px;
   border-radius: 5px;
   transition: all 0.3s ease;

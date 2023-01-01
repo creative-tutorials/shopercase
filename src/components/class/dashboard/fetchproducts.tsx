@@ -1,3 +1,4 @@
+import { useState } from "react";
 export function FecthProductData({ result, dshstyle }: any) {
   return (
     <>
@@ -7,8 +8,8 @@ export function FecthProductData({ result, dshstyle }: any) {
             <span>{item.productID}</span>
             <span>{item.productName}</span>
             <span>{item.productPrice}</span>
-            <span>
-              <i className="fa-regular fa-trash"></i>
+            <span id="action-btn">
+              <i className="fa-regular fa-trash-can"></i>
             </span>
           </div>
         );

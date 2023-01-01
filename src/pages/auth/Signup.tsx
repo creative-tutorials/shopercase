@@ -1,10 +1,16 @@
 import { Toast } from "../../components/class/Toast";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { StoreSession } from "../../functions/StoreSession";
 import lign from "../../styles/loginstyle.module.css";
 import { checkPswrdTypeState } from "../../functions/checkPswrdTypeState";
+import { CheckIfDeviceIsSupported } from "../../functions/CheckDeviceSupport";
 function SignUpComponent() {
+  let [limit, setlimit] = useState(0) 
+  useEffect(() => {
+    setlimit(limit++)
+    limit > 1 ? null : CheckIfDeviceIsSupported();
+  }, [])
   const FullName_input_value: any = useRef(),
     Email: any = useRef(),
     Password: any = useRef(),
@@ -19,9 +25,13 @@ function SignUpComponent() {
 
   function CheckForAge() {
     const Bdate = DOB_input_value.current.value;
-    const Bday = +new Date(Bdate);
-    const result = +~~((Date.now() - Bday) / 31557600000);
-    age_storage.current = result;
+    const currentDate = new Date();
+    const birthDate = new Date(Bdate);
+    const ageInMilleseconds = currentDate.getTime() - birthDate.getTime();
+    const ageInYears = ageInMilleseconds / 31536000000;
+    const age = Math.floor(ageInYears); 
+    console.log(age)
+    age_storage.current = age;
   }
 
   const HandleAuthentication = async () => {
@@ -131,7 +141,7 @@ function SignUpComponent() {
         <div id={lign.ifo}>
           <p>
             <i className="fa-regular fa-circle-info"></i> Please read our terms
-            & conditions before moving forward
+            & conditions before proceeding forward
           </p>
         </div>
       </div>

@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import { Toast } from "../../components/class/Toast";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect} from "react";
 import lign from "../../styles/loginstyle.module.css";
 import { checkPswrdTypeState } from "../../functions/checkPswrdTypeState";
 import { StoreSession } from "../../functions/StoreSession";
+import { CheckIfDeviceIsSupported } from "../../functions/CheckDeviceSupport";
 function LoginComponent() {
+  let [limit, setlimit] = useState(0) 
+  useEffect(() => {
+    setlimit(limit++)
+    limit > 1 ? null : CheckIfDeviceIsSupported();
+  }, [])
   const [errorMessage, seterrorMessage] = useState(null),
     [toastisActive, settoastisActive] = useState(false);
   const [isTypeText, setisTypeText] = useState(false);
@@ -86,7 +92,7 @@ function LoginComponent() {
         <div id={lign.ifo}>
           <p>
             <i className="fa-regular fa-circle-info"></i> Please read our terms
-            & conditions before moving forward
+            & conditions before proceeding forward
           </p>
         </div>
       </div>
