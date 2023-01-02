@@ -7,6 +7,7 @@
   overflow: hidden;
 }
 .viewbx_wrapper {
+  width: 35rem;
   padding: 30px;
   border-radius: 5px;
 }
@@ -89,6 +90,7 @@
 #pager p a {
   text-decoration: none;
   color: black;
+  text-align: center;
 }
 #pager p a:hover {
   text-decoration: underline;
@@ -99,4 +101,5 @@
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--blue-fourth-color);
+  text-align: center;
 }
