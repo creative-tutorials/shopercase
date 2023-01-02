@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 import { Toast } from "../../components/class/Toast";
-import { useState, useRef, useEffect} from "react";
+import { useState, useRef, useEffect } from "react";
 import lign from "../../styles/loginstyle.module.css";
 import { checkPswrdTypeState } from "../../functions/checkPswrdTypeState";
 import { StoreSession } from "../../functions/StoreSession";
 import { CheckIfDeviceIsSupported } from "../../functions/CheckDeviceSupport";
 function LoginComponent() {
-  let [limit, setlimit] = useState(0) 
+  let [limit, setlimit] = useState(0);
   useEffect(() => {
-    setlimit(limit++)
+    setlimit(limit++);
     limit > 1 ? null : CheckIfDeviceIsSupported();
-  }, [])
+  }, []);
   const [errorMessage, seterrorMessage] = useState(null),
     [toastisActive, settoastisActive] = useState(false);
   const [isTypeText, setisTypeText] = useState(false);
@@ -35,10 +35,13 @@ function LoginComponent() {
       if (response.ok) {
         const result = await response.json();
         StoreSession(result);
-        alert('Login Sucessful');
+        alert("Login Sucessful");
       } else {
         const result = await response.json();
         settoastisActive(true);
+        setTimeout(() => {
+          settoastisActive(false);
+        }, 4500);
         seterrorMessage(result.message);
       }
     } catch (err) {
@@ -73,8 +76,9 @@ function LoginComponent() {
             ref={Password}
           />
           <i className="fa-regular fa-lock" id={lign.left}></i>
+          <Toast errorMessage={errorMessage} toastisActive={toastisActive} />
           <i
-            className={isTypeText ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'}
+            className={isTypeText ? "fa-solid fa-eye-slash" : "fa-solid fa-eye"}
             onClick={CheckPswrdTypeState}
             id={lign.right}
           ></i>
@@ -96,7 +100,6 @@ function LoginComponent() {
           </p>
         </div>
       </div>
-      <Toast errorMessage={errorMessage} toastisActive={toastisActive} />
     </div>
   );
 }
