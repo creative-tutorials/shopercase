@@ -119,13 +119,14 @@ function SignUpComponent() {
         <div id={lign.input_wrapper}>
           <input
             type="date"
-            name="email"
-            id="email"
+            name="dob"
+            id="dob"
             autoComplete="off"
             ref={DOB_input_value}
             onChange={CheckForAge}
           />
           <i className="fa-regular fa-calendar-days" id={lign.left}></i>
+          <Toast errorMessage={errorMessage} toastisActive={toastisActive} />
         </div>
         <div id={lign.button_wrapper}>
           <button onClick={HandleAuthentication}>
@@ -145,7 +146,6 @@ function SignUpComponent() {
           </p>
         </div>
       </div>
-      <Toast errorMessage={errorMessage} toastisActive={toastisActive} />
     </div>
   );
 }
