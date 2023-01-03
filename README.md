@@ -1,6 +1,6 @@
 <div align="center">
   
-<img src="https://user-images.githubusercontent.com/68476321/207319652-d1eb663c-f34c-4f75-8962-3122d14ff572.png" alt="Pink_Retro_Boho_Beauty_Blogger_Name_Logo-removebg-preview" width="200px" height="200px" />
+<img src="https://user-images.githubusercontent.com/68476321/210277433-b28dfdd0-f85e-4966-8699-a070c68696be.png" alt="Group 1" width="200px" height="200px" />
 
 # Shopercase Web Frontend
 
