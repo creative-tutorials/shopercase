@@ -1,12 +1,10 @@
 .toast {
   text-align: justify;
   width: auto;
-  color: #721c24;
+  color: #28699e;
+  font-weight: 500;
   bottom: 10px;
   border-radius: 5px;
   transition: all 0.3s ease;
   margin-top: 1rem;
-}
-.toast.active  {
-    /* right: 30px; */
 }

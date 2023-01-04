@@ -150,3 +150,63 @@
   max-height: 500px;
   overflow: auto;
 }
+@media (prefers-color-scheme: dark) {
+  #dashboard_sidebar {
+    background-color: var(--dark-theme);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  }
+  #dashboard_sidebar #dshbrd_sdebr_tp_cnt #sidebar_header h3 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--alice-blue);
+  }
+  #sidebar_links a {
+    margin-top: 28px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--alice-blue);
+    font-size: 1rem;
+  }
+  #sidebar_links a:hover {
+    color: var(--blue-second-color);
+  }
+  #dashboard_body {
+    background-color: var(--dark-theme3);
+  }
+  #dtp h4 {
+    color: var(--alice-blue);
+  }
+  #action_component {
+    background-color: var(--dark-theme);
+    box-shadow: 0px 8px 15px -10px rgba(0, 0, 0, 0.1);
+  }
+  #action_component #input_ input {
+    border: 2px solid transparent;
+    background-color: var(--dark-blue-custom-color);
+    color: var(--alabaser-whitish-color);
+  }
+  #action_component #input_ input::placeholder {
+    color: var(--alabaser-whitish-color);
+  }
+  #dbt {
+    width: 100%;
+    padding: 25px;
+    background-color: var(--dark-theme);
+    border-radius: 5px;
+    margin-top: 30px;
+  }
+  #dbt #ch3 {
+    background-color: var(--dark-blue-custom-color);
+    color: var(--alabaser-whitish-color);
+  }
+  #dbt #dh4 {
+    background-color: transparent;
+    border-top: 1px solid var(--blue-fourth-color);
+  }
+  #dbt #dh4 span {
+    color: var(--alabaser-whitish-color);
+  }
+  #dbt #dh4 span i {
+    color: var(--alabaser-whitish-color);
+  }
+}

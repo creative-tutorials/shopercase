@@ -4,7 +4,7 @@
   width: 100%;
   padding: 25px;
   background-color: #fff;
-  box-shadow: 0px 10px 15px -11px rgba(0,0,0,0.1);
+  box-shadow: 0px 10px 15px -11px rgba(0, 0, 0, 0.1);
 }
 #col-header-flex {
   width: 100%;
@@ -79,7 +79,7 @@
   pointer-events: none;
   opacity: 0;
   background-color: #fff;
-  box-shadow: 0px 8px 15px -10px rgba(0,0,0,0.1);
+  box-shadow: 0px 8px 15px -10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 15px;
   border-top: 2px solid var(--blue-third-color);
@@ -114,9 +114,6 @@
 }
 .dropdwn i.fa-xmark:hover {
   color: var(--blue-third-color);
-}
-.fa-magnifying-glass {
-  transform: rotateY(180deg);
 }
 #page-body {
   width: 100%;
@@ -163,8 +160,8 @@
   width: 100%;
   padding: 15px 35px;
   outline: none;
-  border: 2px solid #0A0F0D;
-  background-color: #0A0F0D;
+  border: 2px solid #0a0f0d;
+  background-color: #0a0f0d;
   color: #dde1eb;
   border-radius: 50px;
   transition: all 0.3s ease;
@@ -222,9 +219,14 @@ over. */
   position: absolute;
   bottom: 0px;
   width: inherit;
+  height: inherit;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.497);
   backdrop-filter: blur(8px) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   z-index: 999;
   visibility: hidden;
   opacity: 0;
@@ -241,23 +243,29 @@ over. */
 }
 #products #items #item-price {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--smokey-black-color);
 }
-:is(#item-name, #item-price) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#products #item-bottom {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 28px -7px rgba(0, 0, 0, 0.1);
+}
+#item-image:hover ~ #item-bottom #item-name {
+  color: var(--blue-fifth-color);
 }
 #products #items #buttons {
   display: flex;
   width: 100%;
-  width: 100%;
+  height: 100%;
   padding: 15px;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 #products #items #buttons #add-to-cart {
-  width: 20rem;
+  width: 100%;
   padding: 10px;
   background: transparent;
   border: 2px solid var(--smokey-black-color);
@@ -276,23 +284,101 @@ over. */
 }
 #products #items #buttons #purchase {
   width: 100%;
-  height: 45px;
-  background: transparent;
-  margin-left: 30px;
-  border: none;
+  padding: 10px;
+  background: var(--smokey-black-color);
+  border: 2px solid var(--smokey-black-color);
+  border-radius: 5px;
   outline: none;
   color: #fff;
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 0.9rem;
 }
 #products #items #buttons #purchase:hover {
-  text-decoration: underline;
+  background-color: var(--rasin-black-color);
+  border-color: var(--rasin-black-color);
 }
 @media screen and (max-width: 922px) {
   .col-header .col-header-links {
     display: none;
     padding: 0;
     align-items: center;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .col-header {
+    background-color: var(--dark-theme);
+  }
+  #header-title h3 {
+    color: var(--ligth-theme);
+  }
+  #link-wrapper a {
+    color: var(--ligth-theme);
+  }
+  #link-wrapper a:is(:hover, :active) {
+    color: var(--ligth-theme);
+  }
+  #link-wrapper a::before {
+    background-color: var(--ligth-theme) !important;
+  }
+  #extra-link span:is(#numb) {
+    color: var(--ligth-theme);
+  }
+  #extra-link i {
+    color: var(--ligth-theme);
+  }
+  .dropdwn {
+    background-color: var(--dark-theme);
+  }
+  #clickable_list span,
+  #clickable_list a {
+    color: var(--ligth-theme);
+  }
+  #clickable_list span:hover,
+  #clickable_list a:hover {
+    color: var(--blue-second-color);
+  }
+  .dropdwn i.fa-xmark:hover {
+    color: var(--blue-second-color);
+  }
+  #filter_tabs span {
+    color: var(--alice-blue);
+  }
+  #filter_tabs span:hover {
+    color: var(--blue-second-color);
+  }
+  #filter-search input {
+    border: 2px solid var(--dark-blue-custom-color);
+    background-color: var(--dark-blue-custom-color);
+    color: #dde1eb;
+  }
+  #filter-search input:is(:focus, :active) {
+    background: var(--dark-blue-custom-color);
+  }
+  #filter-search input:is(:focus, :active)::placeholder {
+    color: var(--alabaser-whitish-color);
+  }
+  #item-image #item-hover {
+    background-color: rgba(34, 39, 51, 0.588);
+    backdrop-filter: blur(8px) !important;
+  }
+  #products #item-bottom {
+    background-color: var(--dark-blue-custom-color);
+    box-shadow: 0px 4px 28px -7px rgba(0, 0, 0, 0.1);
+  }
+  #products #items #item-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--alice-blue);
+  }
+  #products #items #item-price {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--alice-blue);
+  }
+  #item-image:hover ~ #item-bottom #item-name {
+    color: var(--blue-second-color);
   }
 }

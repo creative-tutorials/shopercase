@@ -1,0 +1,127 @@
+#magic-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  /* overflow: hidden; */
+}
+#magic-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#stage1 {
+  width: 35rem;
+  padding: 30px;
+  border-radius: 5px;
+}
+#stage1 #stage1-input {
+  margin-top: 15px;
+  position: relative;
+}
+#stage1 #stage1-input input {
+  width: 100%;
+  padding: 13px 55px;
+  border: 2px solid #bfbfbf;
+  outline: none;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+#stage1 #stage1-input i {
+  position: absolute;
+  left: 25px;
+  bottom: 18px;
+  transition: all 0.3s ease;
+}
+#stage1 #stage1-input input:is(:active, :focus) {
+  caret-color: var(--blue-second-color);
+  border-color: var(--blue-second-color);
+}
+#stage1 #stage1-input input:is(:active, :focus) ~ i {
+  color: var(--blue-second-color);
+}
+#stage1 #stage1-input input::selection {
+  background-color: var(--blue-fourth-color);
+}
+#stage1 #stage-1-submit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+#stage1 #stage-1-submit button {
+  width: 100px;
+  height: 45px;
+  outline: none;
+  background-color: var(--blue-fourth-color);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+#stage1 #stage-1-submit button:hover {
+  box-shadow: inset 0px 0px 28px -5px rgba(0, 0, 0, 0.1);
+  background-color: var(--blue-fifth-color);
+}
+#stage1 #header h3 {
+  font-size: 1.7rem;
+}
+#stage1 #header p {
+  margin-top: 0.4rem;
+  font-weight: 500;
+}
+#stage2 {
+  width: 35rem;
+  padding: 30px;
+  border-radius: 5px;
+  /* background-color: blue; */
+}
+#stage2 #header h3 {
+  font-size: 1.7rem;
+}
+#stage2 #stage2-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#stage2 #stage2-input {
+  margin-top: 10px;
+}
+#stage2 #stage2-input input {
+  width: 60px;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 1.7rem;
+  border: 2px solid #bfbfbf;
+  outline: none;
+  border-radius: 5px;
+}
+#stage2 #stage-2-submit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+#stage2 #stage-2-submit button {
+  width: 100px;
+  height: 45px;
+  outline: none;
+  background-color: var(--blue-fourth-color);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+#stage2 #stage-2-submit button:hover {
+  box-shadow: inset 0px 0px 28px -5px rgba(0, 0, 0, 0.1);
+  background-color: var(--blue-fifth-color);
+}

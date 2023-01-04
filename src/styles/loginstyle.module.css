@@ -6,6 +6,16 @@
   position: relative;
   overflow: hidden;
 }
+#confeti {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#confeti img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .viewbx_wrapper {
   width: 35rem;
   padding: 30px;
@@ -102,4 +112,27 @@
   font-weight: 500;
   color: var(--blue-fourth-color);
   text-align: center;
+}
+#magicLink_wrapper {
+  margin-top: 15px;
+}
+#magicLink_OAuthButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #d6ddec;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+#magicLink_OAuthButton img {
+  width: 25px;
+  height: 25px;
+}
+#magicLink_OAuthButton span {
+  margin-left: 10px;
+  font-weight: 600;
 }

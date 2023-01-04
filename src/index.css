@@ -1,15 +1,19 @@
 :root {
-  --ligth-theme: #F7F7FF;
+  --ligth-theme: #f7f7ff;
   --dark-theme: #1b2430;
   --dark-theme2: #212c3a;
+  --dark-theme3: #131B23;
   --font-choice: "Poppins";
   --smokey-black-color: #070600;
-  --blue-first-color: #19647E;
-  --blue-second-color: #7CA5B8;
-  --blue-third-color: #38369A;
-  --blue-fourth-color: #6665DD;
-  --blue-fifth-color: #473BF0;
-
+  --rasin-black-color: #212227;
+  --dark-blue-custom-color: #222733;
+  --alice-blue: #E9F1F7;
+  --alabaser-whitish-color: #E0DFD5;
+  --blue-first-color: #19647e;
+  --blue-second-color: #7ca5b8;
+  --blue-third-color: #38369a;
+  --blue-fourth-color: #6665dd;
+  --blue-fifth-color: #473bf0;
 }
 * {
   margin: 0;
@@ -19,4 +23,9 @@
 }
 body {
   background-color: var(--ligth-theme);
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-theme3);
+  }
 }
