@@ -73,7 +73,7 @@ export function Header({
             </div>
           )}
           <div id="extra-link">
-            <i className="fa-regular fa-magnifying-glass"></i>
+            <i className="fa-solid fa-moon"></i>
           </div>
           <div id="extra-link" onClick={setSidebarActive}>
             <i className="fa-regular fa-bars"></i>
