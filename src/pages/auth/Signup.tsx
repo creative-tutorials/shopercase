@@ -6,11 +6,12 @@ import lign from "../../styles/loginstyle.module.css";
 import { checkPswrdTypeState } from "../../functions/checkPswrdTypeState";
 import { CheckIfDeviceIsSupported } from "../../functions/CheckDeviceSupport";
 function SignUpComponent() {
-  let [limit, setlimit] = useState(0) 
+  let [limit, setlimit] = useState(0);
+  const [confetiActive, setconfetiActive] = useState(false);
   useEffect(() => {
-    setlimit(limit++)
+    setlimit(limit++);
     limit > 1 ? null : CheckIfDeviceIsSupported();
-  }, [])
+  }, []);
   const FullName_input_value: any = useRef(),
     Email: any = useRef(),
     Password: any = useRef(),
@@ -29,11 +30,13 @@ function SignUpComponent() {
     const birthDate = new Date(Bdate);
     const ageInMilleseconds = currentDate.getTime() - birthDate.getTime();
     const ageInYears = ageInMilleseconds / 31536000000;
-    const age = Math.floor(ageInYears); 
-    console.log(age)
+    const age = Math.floor(ageInYears);
+    console.log(age);
     age_storage.current = age;
   }
-
+  const signInWithMagicLink = async () => {
+    window.location.pathname = "/magic-login";
+  };
   const HandleAuthentication = async () => {
     const fullName = FullName_input_value.current.value;
     const EmailValue = Email.current.value;
@@ -58,7 +61,7 @@ function SignUpComponent() {
       if (response.ok) {
         const result = await response.json();
         StoreSession(result);
-        alert('account created successfully');
+        alert("account created successfully");
       } else {
         const result = await response.json();
         settoastisActive(true);
@@ -77,6 +80,12 @@ function SignUpComponent() {
         <div className={lign.viewbx_header}>
           <h2>Signup 👋</h2>
           <p>We're glad to have you join us.</p>
+        </div>
+        <div id={lign.magicLink_wrapper}>
+          <button id={lign.magicLink_OAuthButton} onClick={signInWithMagicLink}>
+            <i className="fa-duotone fa-wand-magic-sparkles"></i>
+            <span id={lign.mgtxt}>Continue with Magic Login</span>
+          </button>
         </div>
         <div id={lign.input_wrapper}>
           <input
@@ -146,6 +155,11 @@ function SignUpComponent() {
           </p>
         </div>
       </div>
+      {confetiActive ? (
+        <div id={lign.confeti}>
+          <img src="/Confeti.gif" alt="" />
+        </div>
+      ) : null}
     </div>
   );
 }
