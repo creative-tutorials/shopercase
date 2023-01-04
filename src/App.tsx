@@ -5,9 +5,10 @@ const SignUpComponent = lazy(() => import("./pages/auth/Signup"));
 const AdminDashboard = lazy(() => import("./pages/dashboard"));
 const HomePage = lazy(() => import("./pages/Home"));
 const UnsupportedPage = lazy(() => import("./pages/unsupported"));
+const MagicLogin = lazy(() => import("./pages/auth/magicLogin"));
 import Loader from "./components/class/Loader";
-import ProtectedRoute from "./ProtectedRoute";
-import NewProtectedRoute from "./NewProtectedRoute";
+import ProtectedRoute from "./LoggedoutProtectedRoute";
+import NewProtectedRoute from "./LoggedinProtectedRoute";
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,7 @@ function App() {
             <Route element={<NewProtectedRoute />}>
               <Route path="/login" element={<LoginComponent />}></Route>
               <Route path="/register" element={<SignUpComponent />}></Route>
+              <Route path="/magic-login" element={<MagicLogin />}></Route>
             </Route>
             <Route path="/unsupported" element={<UnsupportedPage />}></Route>
           </Routes>
