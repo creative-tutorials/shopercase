@@ -16,7 +16,7 @@ function HomePage() {
   useEffect(() => {
     setlimit(limit++);
     limit > 1
-      ? console.log("limit reached")
+      ? null
       : [
           FetchProductsFromAPI(),
           CheckIfUserIsLoggedIn(),
