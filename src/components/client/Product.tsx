@@ -34,8 +34,6 @@ export function Product({ result }: any) {
           <div id="items" key={index}>
             <div id="item-image">
               <div id="item-hover">
-                <div id="item-name">{item.productName}</div>
-                <div id="item-price">{item.productPrice}</div>
                 <div id="buttons">
                   <button
                     id="add-to-cart"
@@ -51,6 +49,10 @@ export function Product({ result }: any) {
                 </div>
               </div>
               <img src={item.productImage} alt="" loading="lazy" />
+            </div>
+            <div id="item-bottom">
+              <div id="item-name">{item.productName}</div>
+              <div id="item-price">{item.productPrice}</div>
             </div>
           </div>
         );
