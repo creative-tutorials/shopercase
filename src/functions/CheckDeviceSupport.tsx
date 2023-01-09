@@ -1,7 +1,9 @@
 export const CheckIfDeviceIsSupported = () => {
-  if (navigator.userAgent.match(/Android/i)) {
-    window.location.pathname = "/unsupported";
-  } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+  const deviceRegex =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+  if (deviceRegex) {
     window.location.pathname = "/unsupported";
   }
 };

@@ -9,8 +9,8 @@ export async function FetchProductsFromAPI() {
   /* Retrieving the session key from the parsed session. */
   const sessionKey = parsedSession.session_key;
   try {
-    const response = await fetch(`http://localhost:8080/user/${sessionKey}`, {
-      method: "POST",
+    const response = await fetch(`http://localhost:8080/products/${sessionKey}/watch`, {
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
         apikey: import.meta.env.VITE_API_KEY,

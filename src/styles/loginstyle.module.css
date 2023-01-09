@@ -6,20 +6,9 @@
   position: relative;
   overflow: hidden;
 }
-#confeti {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-#confeti img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 .viewbx_wrapper {
   width: 35rem;
   padding: 30px;
-  border-radius: 5px;
 }
 .viewbx_wrapper .viewbx_header h2 {
   font-size: 1.9rem;
@@ -128,11 +117,105 @@
   cursor: pointer;
   position: relative;
 }
-#magicLink_OAuthButton img {
-  width: 25px;
-  height: 25px;
-}
 #magicLink_OAuthButton span {
   margin-left: 10px;
   font-weight: 600;
+}
+#pin_box_container {
+  width: 35rem;
+  padding: 30px;
+}
+#pinBxInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+#pinBxInput input {
+  width: 60px;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 1.7rem;
+  border: 2px solid #bfbfbf;
+  outline: none;
+  border-radius: 5px;
+}
+#pinBxButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+#pinBxButton button {
+  width: 100px;
+  height: 45px;
+  outline: none;
+  background-color: var(--blue-fourth-color);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+#pinBxButton button:hover {
+  box-shadow: inset 0px 0px 28px -5px rgba(0, 0, 0, 0.1);
+  background-color: var(--blue-fifth-color);
+}
+@media (prefers-color-scheme: dark) {
+  #input_wrapper input {
+    border: 2px solid var(--charcoal-dark-color);
+    background-color: var(--charcoal-dark-color);
+    color: var(--alabaser-whitish-color);
+  }
+  #input_wrapper input::placeholder {
+    color: var(--alabaser-whitish-color);
+  }
+  #input_wrapper input:is(:active, :focus) {
+    caret-color: var(--alabaser-whitish-color);
+    border-color: var(--alabaser-whitish-color);
+  }
+  #input_wrapper input:is(:active, :focus) ~ i#left {
+    color: var(--alabaser-whitish-color);
+  }
+  #magicLink_OAuthButton {
+    background-color: var(--dark-theme2);
+    color: var(--alabaser-whitish-color);
+    border: none;
+  }
+  #magicLink_OAuthButton:hover {
+    background-color: var(--dark-blue-custom-color);
+    color: var(--alabaser-whitish-color);
+  }
+  #pager p {
+    color: var(--alabaser-whitish-color);
+  }
+  #pager p a {
+    color: var(--alabaser-whitish-color);
+  }
+  #pager p a:hover {
+    text-decoration: underline;
+    color: var(--blue-fourth-color);
+  }
+  .viewbx_wrapper .viewbx_header h2 {
+    color: var(--alabaser-whitish-color);
+  }
+  .viewbx_wrapper .viewbx_header p {
+    color: var(--alabaser-whitish-color);
+  }
+  #pinBxInput input {
+    border: 2px solid var(--charcoal-dark-color);
+    background-color: var(--charcoal-dark-color);
+    color: var(--alabaser-whitish-color);
+  }
+  #pinBxInput input::selection {
+    background-color: var(--blue-fifth-color);
+  }
+  #pinBxInput input::placeholder {
+    color: var(--alabaser-whitish-color);
+  }
+  #pin_box_container h2 {
+    color: var(--alabaser-whitish-color);
+  }
 }

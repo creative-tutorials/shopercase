@@ -5,11 +5,13 @@ import { CheckIfDeviceIsSupported } from "../functions/CheckDeviceSupport";
 import { useState, useEffect } from "react";
 import { Filter } from "../components/class/filter/Filter";
 import { Header } from "../components/class/col-header/Header";
+import { useNavigate } from 'react-router-dom';
 function HomePage() {
   const [active, setactive] = useState(false);
   const [dropdwnActive, setdropdwnActive] = useState(false);
   const [isLoggedIn, setisLoggedIn] = useState(false);
   let [limit, setlimit] = useState(0);
+  const navigate = useNavigate();
   const setSidebarActive = () => {
     setactive(true);
   };
@@ -31,7 +33,7 @@ function HomePage() {
   const HandleLogout = () => {
     localStorage.removeItem("auth-session");
     setTimeout(() => {
-      window.location.pathname = "/";
+     navigate('/')
     }, 2000);
   };
   const ShowDropDwnMenu = () => {
@@ -40,13 +42,6 @@ function HomePage() {
     HideDropDwnMenu = () => {
       setdropdwnActive(false);
     };
-  const HandleFilteringData = () => {
-    try {
-      alert("This feature is still under development");
-    } catch (error) {
-      console.log("error");
-    }
-  };
   return (
     <div className="HomePage">
       <Header
@@ -61,7 +56,7 @@ function HomePage() {
         id="page-body"
         className={dropdwnActive ? "pg-active" : "pg-inactive"}
       >
-        <Filter HandleFilteringData={HandleFilteringData} />
+        <Filter />
         <div id="products"></div>
       </div>
       <Sidebar active={active} setactive={setactive} />

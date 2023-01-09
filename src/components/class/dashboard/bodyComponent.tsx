@@ -8,8 +8,14 @@ export function BodyComponent({ dshstyle, setSliderFormActive }: any) {
     setSliderFormActive(true);
   };
   const fetchproductsdata = async () => {
+    /* Retrieving the session from localStorage. */
+    const session: any = localStorage.getItem("auth-session");
+    /* Parsing the session from localStorage. */
+    const parsedSession = JSON.parse(session);
+    /* Retrieving the session key from the parsed session. */
+    const sessionKey = parsedSession.session_key;
     try {
-      const response = await fetch("http://localhost:8080/admin/products", {
+      const response = await fetch(`http://localhost:8080/products/${sessionKey}/watch`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -39,7 +45,7 @@ export function BodyComponent({ dshstyle, setSliderFormActive }: any) {
   return (
     <div id={dshstyle.dashboard_body}>
       <div id={dshstyle.dtp}>
-        <h4>Products</h4>
+        <h4>Admin Dashboard</h4>
         <div id={dshstyle.action_component}>
           <div id={dshstyle.input_}>
             <input

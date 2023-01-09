@@ -8,3 +8,8 @@
   transition: all 0.3s ease;
   margin-top: 1rem;
 }
+@media (prefers-color-scheme: dark) {
+  .toast {
+    color: var(--blue-fourth-color);
+  }
+}

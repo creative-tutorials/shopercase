@@ -1,4 +1,4 @@
-/* SliderForm */
+/* The CSS for the form that is visible. */
 #sliderForm {
   display: flex;
   flex-direction: column;
@@ -13,6 +13,7 @@
   padding: 25px;
   transition: all 0.3s cubic-bezier(0.88, 0.81, 0.09, 0.58);
 }
+/* The CSS for the hidden form. */
 #hidden {
   display: flex;
   flex-direction: column;
@@ -118,4 +119,45 @@
   margin-left: 20px;
   background-color: var(--blue-fifth-color);
   color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  #sliderForm {
+    background-color: var(--dark-theme);
+  }
+  #hidden {
+    background-color: var(--dark-theme);
+  }
+  #form_header {
+    background-color: var(--dark-theme2);
+    color: var(--alabaser-whitish-color);
+  }
+  #tp_bx_lf span {
+    color: var(--alabaser-whitish-color);
+  }
+  #tp_bx_rt input {
+    border: 2px solid transparent;
+    background-color: var(--dark-theme3);
+    color: var(--alabaser-whitish-color);
+  }
+  #tp_bx_rt input::placeholder {
+    color: var(--alice-blue);
+  }
+  #tp_bx_rt #upload_btn {
+    color: var(--alice-blue);
+  }
+  #tp_bx_rt:has(span) {
+    color: var(--alice-blue);
+  }
+  #form_body_bt button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: var(--charcoal-dark-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: rgb(255, 227, 227);
+    font-weight: 500;
+  }
 }

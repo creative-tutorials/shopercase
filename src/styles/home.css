@@ -329,6 +329,13 @@ over. */
   #extra-link i {
     color: var(--ligth-theme);
   }
+  #extra-link i:is(.fa-moon) {
+    position: relative;
+  }
+  #extra-link i:is(.fa-moon)::before {
+    position: relative;
+    content: '\f185';
+  }
   .dropdwn {
     background-color: var(--dark-theme);
   }
@@ -356,6 +363,7 @@ over. */
   }
   #filter-search input:is(:focus, :active) {
     background: var(--dark-blue-custom-color);
+    color: #dde1eb;
   }
   #filter-search input:is(:focus, :active)::placeholder {
     color: var(--alabaser-whitish-color);

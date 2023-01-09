@@ -1,37 +1,18 @@
 export function Product({ result }: any) {
-  const HandlePurchase = () => {
-    result.map(function (item: any, index: any) {
-      FirePurchaseAPI(item);
+  
+  const RouteToCheckOutPage = async () => {
+    result.map(function (data: any, index: any) {
+      localStorage.setItem("payment-cache", JSON.stringify(data));
+      setTimeout(() => {
+        window.location.pathname = "/checkout";
+      }, 2000);
     });
-    async function FirePurchaseAPI(item: any) {
-      const session_token: any = localStorage.getItem("auth-session");
-      const parsedData = JSON.parse(session_token);
-      try {
-        const response = await fetch(
-          `http://localhost:8080/products/request/${item.productID}/${parsedData.session_key}`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              apikey: import.meta.env.VITE_API_KEY,
-            },
-          }
-        );
-
-        if (response.ok) {
-          const result = await response.json();
-          console.log(result);
-        }
-      } catch (err) {
-        console.error(err);
-      }
-    }
   };
   return (
     <div id="product-flex">
       {result.map(function (item: any, index: any) {
         return (
-          <div id="items" key={index}>
+          <div id="items" key={index} data-product-name={item.productName}>
             <div id="item-image">
               <div id="item-hover">
                 <div id="buttons">
@@ -43,7 +24,7 @@ export function Product({ result }: any) {
                   >
                     <i className="fa-regular fa-cart-shopping"></i> Add to cart
                   </button>
-                  <button id="purchase" onClick={HandlePurchase}>
+                  <button id="purchase" onClick={RouteToCheckOutPage}>
                     Purchase
                   </button>
                 </div>
@@ -60,3 +41,5 @@ export function Product({ result }: any) {
     </div>
   );
 }
+
+

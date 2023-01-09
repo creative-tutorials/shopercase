@@ -136,7 +136,7 @@ export function SliderForm({ SliderFormActive, setSliderFormActive }: any) {
           </div>
           <div id={slidcss.tp_box}>
             <div id={slidcss.tp_bx_lf}>
-              <span>Product Name</span>
+              <span>Product Price</span>
             </div>
             <div id={slidcss.tp_bx_rt}>
               <input

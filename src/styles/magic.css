@@ -4,7 +4,6 @@
   justify-content: center;
   min-height: 100vh;
   position: relative;
-  /* overflow: hidden; */
 }
 #magic-wrapper {
   width: 100%;
@@ -80,7 +79,6 @@
   width: 35rem;
   padding: 30px;
   border-radius: 5px;
-  /* background-color: blue; */
 }
 #stage2 #header h3 {
   font-size: 1.7rem;
@@ -124,4 +122,36 @@
 #stage2 #stage-2-submit button:hover {
   box-shadow: inset 0px 0px 28px -5px rgba(0, 0, 0, 0.1);
   background-color: var(--blue-fifth-color);
+}
+@media (prefers-color-scheme: dark) {
+  #stage1 #stage1-input input {
+    border: 2px solid var(--charcoal-dark-color);
+    background-color: var(--charcoal-dark-color);
+    color: var(--alabaser-whitish-color);
+  }
+  #stage1 #stage1-input input::selection {
+    background-color: var(--blue-fifth-color);
+  }
+  #stage1 #stage1-input input::placeholder {
+    color: var(--alabaser-whitish-color);
+  }
+  #stage1 #stage1-input i {
+    color: var(--alabaser-whitish-color);
+  }
+  #stage1 #stage1-input input:is(:active, :focus) {
+    caret-color: var(--alabaser-whitish-color);
+    border-color: var(--alabaser-whitish-color);
+  }
+  #stage1 #stage1-input input:is(:active, :focus) ~ i {
+    color: var(--alabaser-whitish-color);
+  }
+  #stage1 #header h3 {
+    color: var(--alabaser-whitish-color);
+  }
+  #stage2 #header h3 {
+    color: var(--alabaser-whitish-color);
+  }
+  #stage1 #header p {
+    color: var(--alabaser-whitish-color);
+  }
 }
