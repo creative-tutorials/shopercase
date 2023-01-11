@@ -52,7 +52,6 @@ function SignUpComponent() {
 
       if (response.ok) {
         const result = await response.json();
-        // StoreSession(result);
         setstage(2);
         settoastisActive(true);
         setTimeout(() => {
@@ -72,13 +71,13 @@ function SignUpComponent() {
     }
   };
   const HandleVerificationRequest = async () => {
-    const code1 = pin1.current.value;
-    const code2 = pin2.current.value;
-    const code3 = pin3.current.value;
-    const code4 = pin4.current.value;
-    const code5 = pin5.current.value;
-    const code6 = pin6.current.value;
-    const joinedString = code1.concat(code2, code3, code4, code5, code6);
+    const joinedString = pin1.current.value.concat(
+      pin2.current.value,
+      pin3.current.value,
+      pin4.current.value,
+      pin5.current.value,
+      pin6.current.value
+    );
     try {
       const response = await fetch(
         "http://localhost:8080/create-account/validate",
@@ -195,7 +194,14 @@ function SignUpComponent() {
         <div id={lign.pin_box_container}>
           <h2>Let's Complete What you've Started 😸</h2>
           <div id={lign.pinBxInput}>
-            <input type="text" name="pin1" id="pin1" maxLength={1} ref={pin1} autoFocus />
+            <input
+              type="text"
+              name="pin1"
+              id="pin1"
+              maxLength={1}
+              ref={pin1}
+              autoFocus
+            />
             <input type="text" name="pin2" id="pin2" maxLength={1} ref={pin2} />
             <input type="text" name="pin3" id="pin3" maxLength={1} ref={pin3} />
             <input type="text" name="pin4" id="pin4" maxLength={1} ref={pin4} />

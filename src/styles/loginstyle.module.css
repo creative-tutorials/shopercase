@@ -180,13 +180,14 @@
     color: var(--alabaser-whitish-color);
   }
   #magicLink_OAuthButton {
-    background-color: var(--dark-theme2);
+    background-color: var(--busted-dark-color);
     color: var(--alabaser-whitish-color);
     border: none;
   }
   #magicLink_OAuthButton:hover {
-    background-color: var(--dark-blue-custom-color);
-    color: var(--alabaser-whitish-color);
+    background-color: var(--unstable-dark-color);
+    box-shadow: inset 0px 10px 15px -3px rgba(0,0,0,0.1);
+    color: var(--not-so-white-color);
   }
   #pager p {
     color: var(--alabaser-whitish-color);

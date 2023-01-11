@@ -1,0 +1,323 @@
+#MyProfile {
+  width: 100%;
+}
+#profileHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px;
+  background-color: #fff;
+  box-shadow: 0px 10px 15px -11px rgb(0 0 0 / 10%);
+  z-index: 99;
+}
+#header-contents {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#left {
+  display: flex;
+  align-items: center;
+}
+#left span {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+#left h4 {
+  margin-left: 5px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--blue-fifth-color);
+}
+#profileHeader #right {
+  display: flex;
+  align-items: center;
+}
+#profileHeader #right #right-links {
+  margin-right: 30px;
+}
+#profileHeader #right #right-links a {
+  margin-right: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--rasin-black-color);
+}
+#profileHeader #right #right-btn #logout-button {
+  padding: 12px 25px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--alabaser-whitish-color);
+  color: var(--dark-theme);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#profileHeader #right #right-btn #logout-button:hover {
+  background-color: var(--not-so-white-color);
+  color: var(--dark-theme3);
+}
+#MyProfile-Body {
+  margin-top: 8rem;
+  padding: 25px;
+}
+#heading {
+  position: relative;
+}
+#heading h1 {
+  color: var(--alice-blue);
+}
+#heading::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  height: 2px;
+  background-color: var(--charcoal-dark-color);
+}
+#col-render {
+  margin-top: 3rem;
+}
+#contain-profile-username h2 {
+  color: var(--alice-blue);
+}
+#contain-profile-summary p {
+  margin-top: 1rem;
+  width: auto;
+  border: 1px solid var(--charcoal-dark-color);
+  background-color: var(--unstable-dark-color);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: inset 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  color: var(--alice-blue);
+  font-size: 1rem;
+}
+#contain-button-CTA {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+#contain-button-CTA button {
+  width: 200px;
+  height: 50px;
+  background-color: #ea2b1f;
+  border: none;
+  outline: none;
+  color: var(--alice-blue);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+#contain-button-CTA button:nth-child(2) {
+  background-color: var(--unstable-dark-color);
+  margin-left: 10px;
+}
+#contain-button-CTA button:nth-child(2):hover {
+  background-color: var(--dark-blue-custom-color);
+  box-shadow: inset -4px 0px 35px 6px rgba(0, 0, 0, 0.1);
+}
+#contain-button-CTA button:hover {
+  background-color: #bf3100;
+  color: var(--alabaser-whitish-color);
+  box-shadow: inset -4px 0px 35px 6px rgba(0, 0, 0, 0.1);
+}
+#MyProfile {
+  position: relative;
+}
+#edit-box {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  padding: 25px;
+  transition: all 0.3s cubic-bezier(0.88, 0.81, 0.09, 0.58);
+  z-index: 100;
+}
+#inactive {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 25px;
+  transition: all 0.3s cubic-bezier(0.88, 0.81, 0.09, 0.58);
+}
+#edit-box_header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 25px;
+}
+#edit-box_header span {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+#edit-box_header p {
+  font-size: 0.9rem;
+}
+#form-container {
+  margin-top: 105px;
+}
+#tp_fields {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#fields-fm-left span {
+  color: #3c4048;
+  font-size: 0.9rem;
+}
+#fields-fm-right input,
+textarea {
+  width: 300px;
+  padding: 15px;
+  border: 2px solid transparent;
+  background-color: #e9e9e9;
+  outline: none;
+  border-radius: 5px;
+  color: black;
+  transition: all 0.3s ease;
+}
+#fields-fm-right textarea {
+  resize: none;
+}
+#fields-fm-right #upload_btn {
+  width: 300px;
+  padding: 15px;
+  outline: none;
+  border: 2px dashed var(--blue-fourth-color) !important;
+  background: transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+#fields-fm-right #upload_btn:hover {
+  color: var(--blue-fourth-color);
+}
+#fields-fm-right {
+  display: flex;
+  flex-direction: column;
+}
+#fields-fm-right:has(span) {
+  color: var(--blue-first-color);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: flex-end;
+}
+#bt_fields {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+#bt_fields button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background-color: #eaeaea;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: rgb(245, 58, 58);
+  font-weight: 500;
+}
+#bt_fields button:last-child {
+  margin-left: 20px;
+  background-color: var(--blue-fifth-color);
+  color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  #edit-box {
+    background-color: var(--dark-theme);
+  }
+  #inactive {
+    background-color: var(--dark-theme);
+  }
+  #edit-box_header {
+    background-color: var(--dark-theme2);
+    color: var(--alabaser-whitish-color);
+  }
+  #fields-fm-left span {
+    color: var(--alabaser-whitish-color);
+  }
+  #fields-fm-right input {
+    border: 2px solid transparent;
+    background-color: var(--dark-theme3);
+    color: var(--alabaser-whitish-color);
+  }
+  #fields-fm-right textarea {
+    border: 2px solid transparent;
+    background-color: var(--dark-theme3);
+    color: var(--alabaser-whitish-color);
+  }
+  #fields-fm-right textarea::placeholder {
+    color: var(--alice-blue);
+  }
+  #fields-fm-right input::placeholder {
+    color: var(--alice-blue);
+  }
+  #fields-fm-right #upload_btn {
+    color: var(--alice-blue);
+  }
+  #fields-fm-right:has(span) {
+    color: var(--alice-blue);
+  }
+  #bt_fields button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: var(--charcoal-dark-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: rgb(255, 227, 227);
+    font-weight: 500;
+  }
+  #profileHeader {
+    background-color: var(--dark-theme);
+    box-shadow: 0px 10px 15px -11px rgb(0 0 0 / 10%);
+  }
+  #left span {
+    color: var(--alice-blue);
+  }
+  #left h4 {
+    color: var(--blue-fourth-color);
+  }
+  #profileHeader #right #right-links a {
+    color: var(--ligth-theme);
+  }
+  #profileHeader #right #right-links a:hover {
+    color: var(--alabaser-whitish-color);
+  }
+  #profileHeader #right #right-btn #logout-button {
+    background-color: transparent;
+    color: var(--alice-blue);
+  }
+  #profileHeader #right #right-btn #logout-button:hover {
+    background-color: var(--dark-theme2);
+    color: var(--alice-blue);
+    box-shadow: inset 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+}

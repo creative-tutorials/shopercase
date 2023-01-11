@@ -28,6 +28,7 @@ function LoginComponent() {
         },
         body: JSON.stringify({
           email: Email.current.value,
+          password: Password.current.value,
         }),
       });
 

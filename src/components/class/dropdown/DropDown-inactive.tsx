@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-export function DropDownInactive({ HideDropDwnMenu, HandleLogout }: any) {
+export function DropDownInactive({ HandleLogout }: any) {
   return (
     <div className="dropdwn">
-      <i className="fa-regular fa-xmark" onClick={HideDropDwnMenu}></i>
+      <i className="fa-regular fa-xmark"></i>
       <span id="clickable_list">
         <span
           id="login"

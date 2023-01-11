@@ -90,7 +90,7 @@
   align-items: flex-end;
 }
 #tp_bx_rt span::selection {
-  background-color: #f3c848;
+  background-color: var(--charcoal-dark-color);
   color: black;
 }
 #tp_bx_rt input:is(:active, :focus) {

@@ -54,7 +54,6 @@ export function Header({
                 />
               ) : (
                 <DropDownInactive
-                  HideDropDwnMenu={HideDropDwnMenu}
                   HandleLogout={HandleLogout}
                 />
               )}

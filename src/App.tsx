@@ -8,6 +8,7 @@ const UnsupportedPage = lazy(() => import("./pages/unsupported"));
 const MagicLogin = lazy(() => import("./pages/auth/magicLogin"));
 const CheckOutPage = lazy(() => import("./pages/payment/checkout"));
 const NotFoundPage = lazy(() => import("./pages/error/Not-Found"));
+const MyProfile = lazy(() => import("./pages/Profile"));
 import Loader from "./components/class/Loader";
 import ProtectedRoute from "./LoggedoutProtectedRoute";
 import NewProtectedRoute from "./LoggedinProtectedRoute";
@@ -21,6 +22,7 @@ function App() {
               <Route path="/" element={<HomePage />}></Route>
               <Route path="/dashboard" element={<AdminDashboard />}></Route>
               <Route path="/checkout" element={<CheckOutPage />}></Route>
+              <Route path="/profile" element={<MyProfile />}></Route>
             </Route>
             <Route element={<NewProtectedRoute />}>
               <Route path="/login" element={<LoginComponent />}></Route>
