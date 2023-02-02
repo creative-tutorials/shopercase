@@ -1,13 +1,19 @@
+#App {
+  position: relative;
+}
 #header {
+  position: fixed;
   width: 100%;
+  /* height: 100%; */
   padding: 25px 60px;
   background-color: var(--dark-theme2);
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 20;
 }
 #header_content {
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 #logo {
   display: flex;
@@ -27,6 +33,8 @@
 #header_cr {
   display: flex;
   align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
 }
 #links {
   margin-right: 2rem;
@@ -42,7 +50,11 @@
 #links a:hover {
   color: var(--gentle-blue-color);
 }
+#button {
+  width: 100%;
+}
 #button button {
+  width: 100%;
   padding: 13px 30px;
   outline: none;
   border: none;
@@ -71,7 +83,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 2rem;
+  text-align: center;
+  margin-top: 8rem;
 }
 #main #c4_lc h1 {
   background: #9f95c4;
@@ -161,6 +174,7 @@
   box-shadow: inset 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 #lists #list h3 {
+  margin-top: 1.2rem;
   font-size: 1.6rem;
   color: var(--alabaser-whitish-color);
 }
@@ -210,7 +224,7 @@
 }
 #card h1 {
   color: var(--alabaser-whitish-color);
-  margin-top: 1rem;
+  margin-top: 1.2rem;
 }
 #card p {
   color: #afb9c3;
@@ -352,6 +366,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 }
 #ponent #signup_text {
   font-size: 3rem;
@@ -403,6 +418,7 @@
 #footer #fri {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 #fl_left {
   display: flex;
@@ -486,4 +502,121 @@
 }
 #footer #copyright span {
   color: var(--alice-blue);
+}
+#harmburger i {
+  color: var(--alabaser-whitish-color);
+  font-size: 2rem;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  #links,
+  #button {
+    display: none;
+  }
+  #harmburger i {
+    display: block;
+  }
+}
+@media screen and (max-width: 958px) {
+  #main #c4_lc {
+    margin-top: 7rem;
+  }
+}
+@media screen and (max-width: 738px) {
+  #about p#paragraph_context {
+    font-size: 1rem;
+  }
+  #main #c4_lc h1 {
+    font-size: 2.3rem;
+  }
+  #main #c4_lc p {
+    font-size: 1rem;
+  }
+  #about h1#about_heading {
+    font-size: 2.5rem;
+  }
+  #bottom h1 {
+    font-size: 1.5rem;
+    color: var(--alabaser-whitish-color);
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+  #lists #list h3 {
+    font-size: 1.5rem;
+    color: var(--alabaser-whitish-color);
+  }
+  #features h1#your_heading {
+    font-size: 2.2rem;
+    color: var(--alabaser-whitish-color);
+    font-weight: 600;
+    text-align: center;
+  }
+  #security h1#hd {
+    font-size: 2.2rem;
+    color: var(--alabaser-whitish-color);
+    font-weight: 600;
+    text-align: center;
+  }
+  #intx h1#int_text {
+    font-size: 2.2rem;
+    color: var(--alabaser-whitish-color);
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+  }
+  #ponent #signup_text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--alabaser-whitish-color);
+  }
+  #ponent #signup_text2 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--alabaser-whitish-color);
+  }
+  #intx h1#int_text::before {
+    content: "\23";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    color: var(--charcoal-dark-color);
+  }
+  #intx h1#int_text::after {
+    content: "\23";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    color: var(--charcoal-dark-color);
+  }
+  #fl_uni h3 {
+    display: none;
+  }
+  #fl_right #follow {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  #fl_right #follow #fwr i {
+    margin-right: 1.3rem;
+  }
+  #fl_right #follow #fwr {
+    margin-left: 0rem;
+    margin-top: 1.2rem;
+  }
+  #fr #letter {
+    margin-top: 2rem;
+    color: var(--alabaser-whitish-color);
+  }
+  #logo h4 {
+    display: none;
+  }
+  #header {
+    padding: 18px 30px;
+  }
+  #footer #copyright span {
+    font-size: 0.9rem;
+  }
+  #fr #lx {
+    font-size: 0.8rem;
+  }
 }

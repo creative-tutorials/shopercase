@@ -9,8 +9,7 @@ export function Main({ styles }: any) {
           Comprehensive, Easy-to-Use SaaS Solution
         </p>
         <button>
-          Transform Your Business Now With Shopercase{" "}
-          <i className="fa-solid fa-arrow-right"></i>
+          Sign up Now <i className="fa-solid fa-arrow-right"></i>
         </button>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import React from "react";
-export function Header({ styles, Link, Image }: any) {
+export function Header({ styles, Link, Image, setBlurMenuActive }: any) {
   return (
     <header id={styles.header}>
       <div id={styles.header_content}>
@@ -26,6 +26,9 @@ export function Header({ styles, Link, Image }: any) {
           </div>
           <div id={styles.button}>
             <button id={styles.join_beta}>Join Beta</button>
+          </div>
+          <div id={styles.harmburger} onClick={() => setBlurMenuActive(true)}>
+            <i className="fa-solid fa-bars"></i>
           </div>
         </div>
       </div>

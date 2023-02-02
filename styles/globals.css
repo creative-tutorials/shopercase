@@ -28,11 +28,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-choice), sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 body {
   background-color: var(--ligth-theme);
-  scroll-behavior: smooth;
-  scroll-snap-type: mandatory;
 }
 @media (prefers-color-scheme: dark) {
   body {

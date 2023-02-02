@@ -1,5 +1,5 @@
 import React from "react";
-export function Footer({ styles, Image }: any) {
+export function Footer({ styles, Image, Link }: any) {
   return (
     <footer id={styles.footer}>
       <div id={styles.fri}>
@@ -27,9 +27,15 @@ export function Footer({ styles, Image }: any) {
                 <p>Follow us on</p>
               </div>
               <div id={styles.fwr}>
-                <i className="bx bxl-twitter"></i>
-                <i className="bx bxl-facebook-circle"></i>
-                <i className="bx bxl-linkedin-square"></i>
+                <Link href={process.env.NEXT_PUBLIC_TWITTERURL}>
+                  <i className="bx bxl-twitter"></i>
+                </Link>
+                <Link href="/">
+                  <i className="bx bxl-facebook-circle"></i>
+                </Link>
+                <Link href={process.env.NEXT_PUBLIC_LINKEDIN}>
+                  <i className="bx bxl-linkedin-square"></i>
+                </Link>
               </div>
             </div>
           </div>
