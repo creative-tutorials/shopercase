@@ -24,7 +24,7 @@
 #logo h4 {
   color: var(--alabaser-whitish-color);
   font-size: 1.6rem;
-  font-family: "Roboto";
+  font-weight: 500;
 }
 #logo:hover {
   transform: translateY(-5px);
