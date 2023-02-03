@@ -1,5 +1,7 @@
 import React from "react";
-export function SignupPage({styles, Image}:any) {
+import { getURL } from "./functions/getUrl";
+export function SignupPage({ styles, Image }: any) {
+  const url: any = getURL();
   return (
     <section id={styles.signup}>
       <div id={styles.ponent}>
@@ -17,7 +19,14 @@ export function SignupPage({styles, Image}:any) {
         <h1 id={styles.signup_text}>Shop Securely with Shopercase.</h1>
         <h1 id={styles.signup_text2}>Powered by Cutting-Edge Technology.</h1>
         <div id={styles.call_to_action}>
-          <button id={styles.u73}>Sign Up Now!</button>
+          <button
+            id={styles.u73}
+            onClick={() => {
+              window.location.href = url;
+            }}
+          >
+            Sign Up Now!
+          </button>
         </div>
       </div>
     </section>

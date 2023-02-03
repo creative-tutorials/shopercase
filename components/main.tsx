@@ -1,5 +1,7 @@
+import { getURL } from "./functions/getUrl";
 import React from "react";
 export function Main({ styles }: any) {
+  const url:any = getURL();
   return (
     <section id={styles.main}>
       <div id={styles.c4_lc}>
@@ -8,10 +10,16 @@ export function Main({ styles }: any) {
           Transform Your eCommerce Business with Shopercase - The Most
           Comprehensive, Easy-to-Use SaaS Solution
         </p>
-        <button>
+        <button
+          onClick={() => {
+            window.location.href = url;
+          }}
+        >
           Sign up Now <i className="fa-solid fa-arrow-right"></i>
         </button>
       </div>
     </section>
   );
 }
+
+

@@ -6,6 +6,7 @@ import { Security } from "../components/security";
 import { Intergrate } from "../components/intergrate";
 import { SignupPage } from "../components/SignupPage";
 import { Footer } from "../components/Footer";
+import { BlurMenu } from "../components/blurMenu";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
@@ -37,26 +38,12 @@ export default function Home() {
         <Intergrate styles={styles} />
         <SignupPage styles={styles} Image={Image} />
         <Footer styles={styles} Image={Image} Link={Link} />
-        <div
-          className={blurMenuActive ? "blurMenu active" : "blurMenu inactive"}
-        >
-          <div id={"blur_close"} onClick={() => setBlurMenuActive(false)}>
-            <i className="fa-solid fa-xmark"></i>
-          </div>
-          <div id={"blurContent"}>
-            <div id={"blurLinks"}>
-              <Link href={"/"}>Home</Link>
-              <Link href={`/#${styles.about}`}>About</Link>
-              <Link href={`/#${styles.features}`}>Features</Link>
-              <Link href={"/#blogs"}>Blog</Link>
-              <Link href={"/#pricing"}>Pricing</Link>
-              <Link href={"/#contact"}>Contact</Link>
-            </div>
-            <div id={"blurButton"}>
-              <button id={"blurbtn"}>Join Beta</button>
-            </div>
-          </div>
-        </div>
+        <BlurMenu
+          blurMenuActive={blurMenuActive}
+          setBlurMenuActive={setBlurMenuActive}
+          styles={styles}
+          Link={Link}
+        />
       </div>
     </>
   );
