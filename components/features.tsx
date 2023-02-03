@@ -27,10 +27,8 @@ export function Features({ styles }: any) {
           <i className="fa-sharp fa-solid fa-headset"></i>
           <h1>Unparalleled Support Around the Clock</h1>
           <p>
-            24/7 customer support offered by Shopercase to ensure best
-            experience for customers. Support team knowledgeable and friendly to
-            assist with questions and guide through entire process. Unparalleled
-            support gives peace of mind that customers are in good hands.
+            Shoprcase=24/7 support. Best cust exp. Team knowledgeable, friendly.
+            Guide you through. Unparalleld support for peace of mind.
           </p>
         </div>
       </div>

@@ -320,6 +320,7 @@
   text-align: center;
 }
 #in_cards {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -537,13 +538,33 @@
   }
   #bottom h1 {
     font-size: 1.5rem;
-    color: var(--alabaser-whitish-color);
-    font-weight: 600;
     margin-top: 2rem;
   }
+  #bottom #lists {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  #bottom #lists #list {
+    width: 20rem;
+    padding: 2rem;
+  }
   #lists #list h3 {
-    font-size: 1.5rem;
-    color: var(--alabaser-whitish-color);
+    font-size: 1.2rem;
+  }
+  #lists #list p {
+    font-size: 0.9rem;
+  }
+  #features_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-top: 1.3rem;
   }
   #features h1#your_heading {
     font-size: 2.2rem;
@@ -551,28 +572,40 @@
     font-weight: 600;
     text-align: center;
   }
+  #card {
+    width: 20rem;
+    padding: 2rem;
+  }
+  #card h1 {
+    font-size: 1.2rem;
+  }
+  #card p {
+    font-size: 0.9rem;
+  }
+  #secure_cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+  #sCard {
+    width: 20rem;
+    padding: 2rem;
+  }
   #security h1#hd {
     font-size: 2.2rem;
-    color: var(--alabaser-whitish-color);
-    font-weight: 600;
-    text-align: center;
+  }
+  #sCard h1 {
+    font-size: 1.2rem;
+  }
+  #sCard p {
+    font-size: 0.9rem;
   }
   #intx h1#int_text {
-    font-size: 2.2rem;
-    color: var(--alabaser-whitish-color);
-    font-weight: 600;
-    text-align: center;
-    position: relative;
-  }
-  #ponent #signup_text {
     font-size: 1.8rem;
-    font-weight: 500;
-    color: var(--alabaser-whitish-color);
-  }
-  #ponent #signup_text2 {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--alabaser-whitish-color);
   }
   #intx h1#int_text::before {
     content: "\23";
@@ -587,6 +620,33 @@
     top: 0;
     right: -30px;
     color: var(--charcoal-dark-color);
+  }
+  #intx p#in_p {
+    font-size: 0.9rem;
+  }
+  #in_cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  #in_cardco {
+    width: 20rem;
+    padding: 2rem;
+  }
+  #in_cardco h1 {
+    font-size: 1.2rem;
+  }
+  #in_cardco p {
+    font-size: 0.9rem;
+  }
+  #ponent #signup_text {
+    font-size: 1.6rem;
+  }
+  #ponent #signup_text2 {
+    font-size: 0.7rem;
+    margin-top: 1rem;
   }
   #fl_uni h3 {
     display: none;

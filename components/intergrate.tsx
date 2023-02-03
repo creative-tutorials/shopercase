@@ -4,9 +4,8 @@ export function Intergrate({ styles }: any) {
     <section id={styles.intx}>
       <h1 id={styles.int_text}>Integrate With Your Social Media</h1>
       <p id={styles.in_p}>
-        Shopercase offers easy integration of social media accounts to
-        streamline strategy and maximize engagement. Features include quick
-        updates, engagement tracking, and insights monitoring.
+        Social Media easy integration. Streamline strategy, maximize engagement.
+        Quick updates, track engagment., monitor insights.
       </p>
       <div id={styles.in_cards}>
         <div id={styles.in_cardco}>
@@ -15,12 +14,8 @@ export function Intergrate({ styles }: any) {
           </div>
           <h1>Integrate With Facebook</h1>
           <p>
-            Shopercase offers seamless integration with Facebook, making it easy
-            to manage social media presence. The integration enables posting
-            updates, tracking customer engagement, and monitoring insights,
-            streamlining social media strategy and increasing reach. With this
-            integration, staying connected and maximizing engagement with
-            customers is possible.
+            FB seamless integration. Effortless social media mgmt.
+            Post, track, monitor all in one. Streamline strategy, boost reach.
           </p>
         </div>
         <div id={styles.in_cardco}>
@@ -29,12 +24,8 @@ export function Intergrate({ styles }: any) {
           </div>
           <h1>Integrate With Instagram</h1>
           <p>
-            Shopercase offers seamless Instagram integration to boost your
-            social media presence. Quickly post updates, track customer
-            engagement, and monitor insights with our integration. Streamline
-            your social media strategy, reach more customers, and increase your
-            reach with our integration to stay connected with your customers and
-            maximize engagement.
+            Insta seamless integration. Elevate social media presence.
+            Quickly post, track, monitor. Streamline strategy, reach more.
           </p>
         </div>
         <div id={styles.in_cardco}>
@@ -43,10 +34,8 @@ export function Intergrate({ styles }: any) {
           </div>
           <h1>Integrate With Tiktok</h1>
           <p>
-            Shopercase to soon offer TikTok integration, allowing quick and easy
-            posting of updates, tracking of customer engagement and monitoring
-            of insights. Integration streamlines social media strategy and
-            maximizes reach, coming soon.
+            TikTok coming soon. Quick, easy post, track, monitor.
+            Streamline strategy, maximize reach. Get ready for it!
           </p>
         </div>
       </div>

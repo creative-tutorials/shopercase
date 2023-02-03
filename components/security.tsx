@@ -4,11 +4,7 @@ export function Security({ styles }: any) {
     <section id={styles.security}>
       <h1 id={styles.hd}>How we secure your data</h1>
       <p id={styles.brief}>
-        Shopercase prioritizes data security by implementing advanced encryption
-        and authentication measures. The company is constantly monitored by
-        security experts to quickly address any potential threats and maintain
-        the safety of customer data. Shopercase strives to offer the highest
-        level of security for customers&apos; peace of mind.
+        Shopercase ensures data security through encryption and authentication.
       </p>
       <div id={styles.secure_cards}>
         <div id={styles.sCard}>
