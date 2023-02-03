@@ -501,6 +501,11 @@
 #footer #copyright span {
   color: var(--alice-blue);
 }
+#footer #copyright span a {
+  color: var(--alice-blue);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
 #harmburger i {
   color: var(--alabaser-whitish-color);
   font-size: 2rem;
@@ -884,6 +889,9 @@
     background-color: var(--charcoal-dark-color);
   }
   #footer #copyright span {
+    color: var(--dark-blue-custom-color);
+  }
+  #footer #copyright span a {
     color: var(--dark-blue-custom-color);
   }
   #harmburger i {

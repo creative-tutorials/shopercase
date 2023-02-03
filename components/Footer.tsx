@@ -52,7 +52,7 @@ export function Footer({ styles, Image, Link }: any) {
         </div>
       </div>
       <div id={styles.copyright}>
-        <span>&copy; 2022-2023 XDevs - All rights reserved</span>
+        <span>&copy; 2022-2023 <Link href="https://discord.gg/fU28Vmkt7r">XDevs</Link> - All rights reserved</span>
       </div>
     </footer>
   );
