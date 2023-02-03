@@ -4,7 +4,6 @@
 #header {
   position: fixed;
   width: 100%;
-  /* height: 100%; */
   padding: 25px 60px;
   background-color: var(--dark-theme2);
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -34,7 +33,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* flex-wrap: wrap; */
 }
 #links {
   margin-right: 2rem;
@@ -407,7 +405,6 @@
   transition: all 0.3s ease-in-out;
 }
 #call_to_action #u73:hover {
-  /* box-shadow: 0px 10px 15px -3px rgb(64, 56, 214); */
   box-shadow: 0px 0px 36px 0px rgb(64, 56, 214);
 }
 #footer {
@@ -535,6 +532,9 @@
   }
   #about h1#about_heading {
     font-size: 2.5rem;
+  }
+  #about h1#about_heading::before {
+    display: none;
   }
   #bottom h1 {
     font-size: 1.5rem;
@@ -678,5 +678,215 @@
   }
   #fr #lx {
     font-size: 0.8rem;
+  }
+}
+@media (prefers-color-scheme: light) {
+  #header {
+    background-color: var(--ligth-theme);
+  }
+  #logo h4 {
+    color: var(--unstable-dark-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  #links a {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--unstable-dark-color);
+    font-weight: 400;
+    transition: all 0.3s ease;
+  }
+  #links a:hover {
+    color: var(--busted-dark-color);
+  }
+  #button button {
+    background-color: var(--blue-first-color);
+    color: var(--ligth-theme);
+  }
+  #main #c4_lc h1 {
+    background: #4a20f3;
+    background: linear-gradient(to right, #4a20f3 0%, #2058f3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #main #c4_lc p {
+    color: var(--dark-blue-custom-color);
+  }
+  #main #c4_lc button {
+    background-color: var(--blue-first-color);
+    color: var(--ligth-theme);
+  }
+  #main #c4_lc button:hover {
+    background-color: var(--blue-first-hover-color);
+  }
+  #about {
+    background-color: var(--ligth-theme);
+  }
+  #about h1#about_heading {
+    color: var(--dark-blue-custom-color);
+  }
+  #about h1#about_heading::before {
+    color: rgba(16, 21, 26, 0.105);
+  }
+  #about span {
+    color: var(--rasin-black-color);
+  }
+  #about p#paragraph_context {
+    color: var(--rasin-black-color);
+  }
+  #bottom h1 {
+    color: var(--busted-dark-color);
+  }
+  #bottom p#exp {
+    color: var(--smokey-black-color);
+  }
+  #bottom #lists #list {
+    background-color: var(--ligth-theme);
+    border: 1px solid transparent;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  #lists #list h3 {
+    color: var(--dark-blue-custom-color);
+  }
+  #lists #list p {
+    color: var(--unstable-dark-color);
+  }
+  #icon i {
+    background-color: var(--blue-first-hover-color);
+    color: var(--ligth-theme);
+  }
+  #features {
+    background-color: var(--alice-blue);
+  }
+  #features h1#your_heading {
+    color: var(--busted-dark-color);
+  }
+  #card {
+    background-color: var(--ligth-theme);
+    border: 1px solid transparent;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  #card i {
+    background-color: var(--blue-first-hover-color);
+    color: var(--ligth-theme);
+  }
+  #card h1 {
+    color: var(--dark-blue-custom-color);
+    margin-top: 1.2rem;
+  }
+  #card p {
+    color: var(--unstable-dark-color);
+    margin-top: 1rem;
+  }
+  #security {
+    background-color: var(--ligth-theme);
+  }
+  #security h1#hd {
+    color: var(--dark-blue-custom-color);
+  }
+  #security p#brief {
+    color: var(--rasin-black-color);
+  }
+  #sCard {
+    background-color: var(--ligth-theme);
+    border: 1px solid transparent;
+    box-shadow: 0px 10px 15px -3px rgb(0 0 0 / 10%);
+  }
+  #sCard i {
+    background-color: var(--blue-first-hover-color);
+    color: var(--ligth-theme);
+  }
+  #sCard h1 {
+    color: var(--dark-blue-custom-color);
+    margin-top: 1rem;
+  }
+  #sCard p {
+    color: var(--unstable-dark-color);
+    margin-top: 1rem;
+  }
+  #intx {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(71, 69, 195);
+    padding: 25px 60px;
+  }
+  #signup {
+    background-color: var(--ligth-theme);
+  }
+  #ponent #signup_text {
+    color: var(--dark-blue-custom-color);
+  }
+  #ponent #signup_text2 {
+    color: var(--rasin-black-color);
+  }
+  #call_to_action {
+    margin-top: 2rem;
+  }
+  #call_to_action #u73 {
+    background-image: linear-gradient(
+      45deg,
+      hsl(244deg 86% 59%) 0%,
+      hsl(244deg 84% 61%) 11%,
+      hsl(244deg 82% 63%) 22%,
+      hsl(244deg 80% 65%) 33%,
+      hsl(244deg 78% 66%) 44%,
+      hsl(244deg 74% 68%) 56%,
+      hsl(244deg 71% 69%) 67%,
+      hsl(244deg 66% 71%) 78%,
+      hsl(244deg 61% 72%) 89%,
+      hsl(244deg 56% 74%) 100%
+    );
+    color: var(--ligth-theme);
+  }
+  #call_to_action #u73:hover {
+    box-shadow: 0px 0px 36px 0px rgb(64, 56, 214);
+  }
+  #footer {
+    background-color: var(--alice-blue);
+  }
+  #fl_uni h3 {
+    color: var(--rasin-black-color);
+  }
+  #fl_right #tx {
+    color: var(--unstable-dark-color);
+  }
+  #fl_right #follow #fwl p {
+    font-size: 1.1rem;
+    color: var(--dark-blue-custom-color);
+  }
+  #fl_right #follow #fwr i {
+    color: var(--rasin-black-color);
+  }
+  #fr #letter {
+    color: var(--rasin-black-color);
+  }
+  #fr #lx {
+    color: var(--rasin-black-color);
+  }
+  #input input {
+    border: 1px solid var(--charcoal-dark-color);
+    background-color: var(--alabaser-whitish-color);
+    color: var(--rasin-black-color);
+  }
+  #input input::placeholder {
+    color: var(--smokey-black-color);
+  }
+  #input input:is(:focus, :active) {
+    box-shadow: inset 0px 0px 36px 0px rgba(0, 0, 0, 0.1);
+  }
+  #input #send {
+    background-color: var(--blue-fifth-color);
+    color: var(--ligth-theme);
+  }
+  #footer #copyright::before {
+    background-color: var(--charcoal-dark-color);
+  }
+  #footer #copyright span {
+    color: var(--dark-blue-custom-color);
+  }
+  #harmburger i {
+    color: var(--rasin-black-color);
   }
 }

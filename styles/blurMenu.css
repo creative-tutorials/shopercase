@@ -74,3 +74,21 @@
   background-color: var(--blue-first-hover-color);
   box-shadow: inset 0px 6px 19px -6px rgba(0, 0, 0, 0.1);
 }
+@media (prefers-color-scheme: light) {
+  .blurMenu.inactive {
+    background-color: var(--alice-blue);
+  }
+  .blurMenu.active {
+    background-color: var(--alice-blue);
+  }
+  #blur_close i {
+    color: var(--rasin-black-color);
+  }
+  #blurLinks a {
+    color: var(--rasin-black-color);
+  }
+  #blurButton button {
+    background-color: var(--blue-first-color);
+    color: var(--ligth-theme);
+  }
+}

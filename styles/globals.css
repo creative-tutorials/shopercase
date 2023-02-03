@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
 /* Variables storing colors  */
 :root {
-  --ligth-theme: #f7f7ff;
+  --ligth-theme: #ffffff;
   --dark-theme: #1f2732;
   --dark-theme2: #151b24;
   --dark-theme3: #111417;
@@ -33,7 +33,7 @@
   scroll-padding-top: 100px;
 }
 body {
-  background-color: var(--ligth-theme);
+  background-color: var(--alice-blue);
 }
 @media (prefers-color-scheme: dark) {
   body {
