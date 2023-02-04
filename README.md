@@ -8,9 +8,9 @@
 
 <div align="left">
 
-![GitHub issues](https://img.shields.io/github/issues/creative-tutorials/shopercase)
-![GitHub last commit](https://img.shields.io/github/last-commit/creative-tutorials/shopercase)
-![GitHub](https://img.shields.io/github/license/creative-tutorials/shopercase)
+![GitHub issues](https://img.shields.io/github/issues/creative-tutorials/shopercase-landingpage)
+![GitHub last commit](https://img.shields.io/github/last-commit/creative-tutorials/shopercase-landingpage)
+![GitHub](https://img.shields.io/github/license/creative-tutorials/shopercase-landingpage)
 
 </div>
 
