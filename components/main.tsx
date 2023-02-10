@@ -9,7 +9,6 @@ export function Main({ styles }: any) {
         "(prefers-color-scheme: dark)"
       );
       setIsDarkMode(darkModeMediaQuery.matches);
-      console.log(darkModeMediaQuery);
     };
 
     checkDarkMode();
@@ -43,9 +42,9 @@ export function Main({ styles }: any) {
           style={{ objectFit: "contain", width: "100%", height: "100%" }}
           src={isDarkMode ? "/Remake-Dark.png" : "/Remake-Light.png"}
           alt="Picture of featured testimonials"
-          width={0}
+          width={500}
           unoptimized
-          height={0}
+          height={500}
         />
       </div>
     </section>

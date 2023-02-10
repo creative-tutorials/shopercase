@@ -11,11 +11,30 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from 'react';
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [blurMenuActive, setBlurMenuActive] = useState(false);
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('/service-worker.js')
+          .then(registration => {
+            console.log('Service worker registered:', registration);
+          })
+          .catch(error => {
+            console.error('Error registering service worker:', error);
+          });
+      });
+    }
+  
+    return () => {
+      
+    }
+  }, [])
+  
   return (
     <>
       <Head>
