@@ -811,6 +811,9 @@
     color: var(--unstable-dark-color);
     margin-top: 1rem;
   }
+  #card li {
+    color: var(--dark-blue-custom-color);
+  }
   #security {
     background-color: var(--ligth-theme);
   }
@@ -841,6 +844,12 @@
     width: 100%;
     height: 100%;
     background-color: rgb(71, 69, 195);
+    padding: 25px 60px;
+  }
+  #pricingPage {
+    width: 100%;
+    height: 100%;
+    background-color: #2d3868;
     padding: 25px 60px;
   }
   #signup {
@@ -898,7 +907,7 @@
   }
   #input input {
     border: 1px solid var(--charcoal-dark-color);
-    background-color: #f1f2f3;
+    background-color: #ffffff;
     color: var(--rasin-black-color);
   }
   #input input::placeholder {
