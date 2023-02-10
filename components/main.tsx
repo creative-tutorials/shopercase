@@ -1,7 +1,27 @@
 import { getURL } from "./functions/getUrl";
-import React from "react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 export function Main({ styles }: any) {
-  const url:any = getURL();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const darkModeMediaQuery = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      );
+      setIsDarkMode(darkModeMediaQuery.matches);
+      console.log(darkModeMediaQuery);
+    };
+
+    checkDarkMode();
+    window.addEventListener("load", checkDarkMode);
+    window.addEventListener("color-scheme-change", checkDarkMode);
+
+    return () => {
+      window.removeEventListener("load", checkDarkMode);
+      window.removeEventListener("color-scheme-change", checkDarkMode);
+    };
+  }, []);
+  const url: any = getURL();
   return (
     <section id={styles.main}>
       <div id={styles.c4_lc}>
@@ -18,8 +38,16 @@ export function Main({ styles }: any) {
           Sign up Now <i className="fa-solid fa-arrow-right"></i>
         </button>
       </div>
+      <div id={styles.c4_op}>
+        <Image
+          style={{ objectFit: "contain", width: "100%", height: "100%" }}
+          src={isDarkMode ? "/Remake-Dark.png" : "/Remake-Light.png"}
+          alt="Picture of featured testimonials"
+          width={0}
+          unoptimized
+          height={0}
+        />
+      </div>
     </section>
   );
 }
-
-

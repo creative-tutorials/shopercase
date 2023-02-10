@@ -11,7 +11,7 @@ export function Security({ styles }: any) {
           <div id={styles.icon}>
             <i className="fa-duotone fa-lock"></i>
           </div>
-          <h1>Protected by 2FA(enabled by default)</h1>
+          <h1>Protected by 2FA</h1>
           <p>
             Shopercase: Secure data w/2FA enabled on all accts. Authorized
             access only, secure accts, safe data.

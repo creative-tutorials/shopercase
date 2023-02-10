@@ -6,13 +6,13 @@ export function Footer({ styles, Image, Link }: any) {
         <div id={styles.fl}>
           <div id={styles.fl_left}>
             <Image
-              src={"/app.png"}
+              src={"/app2.png"}
               alt="app_logo"
               width={100}
               height={100}
               loading="lazy"
               placeholder="blur"
-              blurDataURL="/app.png"
+              blurDataURL="/app2.png"
             />
             <div id={styles.fl_uni}>
               <h3>Shopercase</h3>

@@ -7,13 +7,13 @@ export function SignupPage({ styles, Image }: any) {
       <div id={styles.ponent}>
         <div id={styles.ourImg}>
           <Image
-            src={"/app.png"}
+            src={"/app2.png"}
             alt=""
             width={200}
             height={200}
             loading="lazy"
             placeholder="blur"
-            blurDataURL="/app.png"
+            blurDataURL="/app2.png"
           />
         </div>
         <h1 id={styles.signup_text}>Shop Securely with Shopercase.</h1>

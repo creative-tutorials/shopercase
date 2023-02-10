@@ -15,7 +15,6 @@ export function BlurMenu({
       <div id={"blurContent"}>
         <div id={"blurLinks"}>
           <Link href={"/"}>Home</Link>
-          <Link href={`/#${styles.about}`}>About</Link>
           <Link href={`/#${styles.features}`}>Features</Link>
           <Link href={"/#blogs"}>Blog</Link>
           <Link href={"/#pricing"}>Pricing</Link>

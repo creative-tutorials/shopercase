@@ -6,7 +6,7 @@ export function Header({ styles, Link, Image, setBlurMenuActive }: any) {
         <div id={styles.header_cl}>
           <div id={styles.logo}>
             <Image
-              src={"/app.png"}
+              src={"/app2.png"}
               alt="shopercase"
               width={60}
               height={60}
@@ -18,7 +18,6 @@ export function Header({ styles, Link, Image, setBlurMenuActive }: any) {
         <div id={styles.header_cr}>
           <div id={styles.links}>
             <Link href={"/"}>Home</Link>
-            <Link href={`/#${styles.about}`}>About</Link>
             <Link href={`/#${styles.features}`}>Features</Link>
             <Link href={"/#blogs"}>Blog</Link>
             <Link href={"/#pricing"}>Pricing</Link>

@@ -4,7 +4,7 @@ export function Intergrate({ styles }: any) {
     <section id={styles.intx}>
       <h1 id={styles.int_text}>Integrate With Your Social Media</h1>
       <p id={styles.in_p}>
-        Social Media easy integration. Streamline strategy, maximize engagement.
+        Social Media easy integration. <br />Streamline strategy, maximize engagement.
         Quick updates, track engagment., monitor insights.
       </p>
       <div id={styles.in_cards}>
