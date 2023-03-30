@@ -359,6 +359,13 @@ footer.footer {
   gap: 1rem;
   color: rgb(192, 204, 241);
 }
+.tltop .bottom .bottom_links a {
+  color: rgb(192, 204, 241);
+  text-decoration: none;
+}
+.tltop .bottom .bottom_links a:hover {
+  color: #fff;
+}
 .top .tr p {
   color: rgb(192, 204, 241);
   font-size: 0.8rem;

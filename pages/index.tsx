@@ -142,7 +142,7 @@ export default function Home() {
             <div className={styles.profileMe}>
               <div className={styles.profile}>
                 <Image
-                  src={"/app.png"}
+                  src={"/InShot_20230320_223257350.jpg"}
                   alt=""
                   width={200}
                   height={200}
@@ -197,7 +197,6 @@ export default function Home() {
           </div>
         </section>
         <section className={styles.sub_section}>
-          {/* <div id={styles.neon}></div> */}
           <div className={styles.sub_container}>
             <div className={styles.subHeader}>
               <h1>
@@ -225,9 +224,23 @@ export default function Home() {
                   </div>
                   <div className={styles.bottom}>
                     <div className={styles.bottom_links}>
-                      <i className="fa-brands fa-twitter"></i>
-                      <i className="fa-brands fa-linkedin"></i>
-                      <i className="fa-brands fa-slack"></i>
+                      <Link href={"https://twitter.com/shopercase_inc"}>
+                        <i className="fa-brands fa-twitter"></i>
+                      </Link>
+                      <Link
+                        href={
+                          "https://www.linkedin.com/in/shopercase-inc-2a8863264"
+                        }
+                      >
+                        <i className="fa-brands fa-linkedin"></i>
+                      </Link>
+                      <Link
+                        href={
+                          "https://join.slack.com/t/shopercase/shared_invite/zt-1sb5gnc9w-RlHbrUDpIQbbn0G8yn~Pzw"
+                        }
+                      >
+                        <i className="fa-brands fa-slack"></i>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -244,4 +257,3 @@ export default function Home() {
     </>
   );
 }
-
