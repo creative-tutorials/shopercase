@@ -1,14 +1,14 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { exportRouteToSignup } from "../functions/exportRouteToSignup";
-import { useState } from 'react';
+import { useState } from "react";
 export function Header({ styles, Link, Image, setBlurMenuActive }: any) {
   const router = useRouter();
-  const [ishidden, setishidden] = useState(true)
+  const [ishidden, setishidden] = useState(true);
   const RouteToSignup = exportRouteToSignup(router);
-  const showDropdwn = ()  => {
-    setishidden(!ishidden)
-  }
+  const showDropdwn = () => {
+    setishidden(!ishidden);
+  };
   return (
     <header id={styles.header}>
       <div id={styles.header_content}>
@@ -25,10 +25,8 @@ export function Header({ styles, Link, Image, setBlurMenuActive }: any) {
           </div>
           <div id={styles.links}>
             <Link href={"/"}>Home</Link>
-            <Link href={`/#${styles.features}`}>Features</Link>
-            <Link href={"/#blogs"}>Blog</Link>
-            <Link href={"/#pricing"}>Pricing</Link>
-            <Link href={"/#contact"}>Contact</Link>
+            <Link href={"/#pricing"}>Blogs</Link>
+            <Link href={"/#contact"}>Join our club</Link>
           </div>
         </div>
         <div id={styles.header_cr}>
@@ -39,14 +37,16 @@ export function Header({ styles, Link, Image, setBlurMenuActive }: any) {
           </div>
         </div>
         <div className={styles.headerDropdown}>
-          <i className="fa-solid fa-grid" id={styles.icox} onClick={showDropdwn}></i>
+          <i
+            className="fa-solid fa-grid"
+            id={styles.icox}
+            onClick={showDropdwn}
+          ></i>
           <div className={ishidden ? styles.dropdown : styles.show}>
             <div className={styles.mobileLink}>
-              <Link href={"/"}>Home</Link>
-              <Link href={`/#${styles.features}`}>Features</Link>
-              <Link href={"/#blogs"}>Blog</Link>
-              <Link href={"/#pricing"}>Pricing</Link>
-              <Link href={"/#contact"}>Contact</Link>
+            <Link href={"/"}>Home</Link>
+            <Link href={"/#pricing"}>Blogs</Link>
+            <Link href={"/#contact"}>Join our club</Link>
             </div>
           </div>
         </div>

@@ -341,7 +341,7 @@ footer.footer {
 .tltop .links {
   margin-top: 1.2rem;
   display: flex;
-  gap: 2.4rem;
+  gap: 1rem;
 }
 .tltop .links a {
   color: rgb(192, 204, 241);

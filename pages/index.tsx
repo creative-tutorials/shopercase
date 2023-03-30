@@ -219,7 +219,6 @@ export default function Home() {
                   <p id={styles.info}>Helpful links</p>
                   <div className={styles.links}>
                     <Link href={"/"}>Join our club</Link>
-                    <Link href={"/showcase"}>Showcase</Link>
                     <Link href={"/blog"}>Blog</Link>
                   </div>
                   <div className={styles.bottom}>
