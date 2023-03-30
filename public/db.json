@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Timi",
+    "age": 12,
+    "status": "online",
+    "gender": "male"
+  },
+  {
+    "name": "XS",
+    "age": 12,
+    "status": "online",
+    "gender": "male"
+  },
+  {
+    "name": "AS",
+    "age": 12,
+    "status": "online",
+    "gender": "male"
+  }
+]
+  

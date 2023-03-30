@@ -1,0 +1,21 @@
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.pagerwrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.pagerwrapper h1 {
+  color: #fff;
+  font-size: 1.5rem;
+  padding-right: 20px;
+  font-weight: 600;
+  border-right: 1px solid #fff;
+}
+.pagerwrapper p {
+  color: #fff;
+}

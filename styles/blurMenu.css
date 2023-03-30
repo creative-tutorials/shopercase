@@ -29,7 +29,7 @@
   font-size: 3rem;
 }
 #blur_close i {
-  color: var(--alabaser-whitish-color);
+  color: var(--ligth-theme);
 }
 #blurContent {
   display: flex;
@@ -46,7 +46,7 @@
 }
 #blurLinks a {
   font-size: 2rem;
-  color: var(--alabaser-whitish-color);
+  color: var(--ligth-theme);
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
@@ -67,7 +67,7 @@
   background-color: var(--blue-first-color);
   border-radius: 3px;
   font-weight: 500;
-  color: var(--alabaser-whitish-color);
+  color: var(--ligth-theme);
   transition: all 0.3s ease;
 }
 #blurButton button:hover {

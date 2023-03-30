@@ -1,5 +1,14 @@
 import React from "react";
+import { useRouter } from "next/router";
+import { exportRouteToSignup } from "../functions/exportRouteToSignup";
+import { useState } from 'react';
 export function Header({ styles, Link, Image, setBlurMenuActive }: any) {
+  const router = useRouter();
+  const [ishidden, setishidden] = useState(true)
+  const RouteToSignup = exportRouteToSignup(router);
+  const showDropdwn = ()  => {
+    setishidden(!ishidden)
+  }
   return (
     <header id={styles.header}>
       <div id={styles.header_content}>
@@ -14,8 +23,6 @@ export function Header({ styles, Link, Image, setBlurMenuActive }: any) {
             />
             <h4>Shopercase</h4>
           </div>
-        </div>
-        <div id={styles.header_cr}>
           <div id={styles.links}>
             <Link href={"/"}>Home</Link>
             <Link href={`/#${styles.features}`}>Features</Link>
@@ -23,11 +30,24 @@ export function Header({ styles, Link, Image, setBlurMenuActive }: any) {
             <Link href={"/#pricing"}>Pricing</Link>
             <Link href={"/#contact"}>Contact</Link>
           </div>
+        </div>
+        <div id={styles.header_cr}>
           <div id={styles.button}>
-            <button id={styles.join_beta}>Join Beta</button>
+            <button id={styles.join_beta} onClick={RouteToSignup}>
+              Sign Up
+            </button>
           </div>
-          <div id={styles.harmburger} onClick={() => setBlurMenuActive(true)}>
-            <i className="fa-solid fa-bars"></i>
+        </div>
+        <div className={styles.headerDropdown}>
+          <i className="fa-solid fa-grid" id={styles.icox} onClick={showDropdwn}></i>
+          <div className={ishidden ? styles.dropdown : styles.show}>
+            <div className={styles.mobileLink}>
+              <Link href={"/"}>Home</Link>
+              <Link href={`/#${styles.features}`}>Features</Link>
+              <Link href={"/#blogs"}>Blog</Link>
+              <Link href={"/#pricing"}>Pricing</Link>
+              <Link href={"/#contact"}>Contact</Link>
+            </div>
           </div>
         </div>
       </div>
