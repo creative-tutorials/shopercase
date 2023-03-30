@@ -169,6 +169,47 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className={styles.masthead}>
+          <div className={styles.mastheader}>
+            <h2>Meet the founders</h2>
+          </div>
+          <div className={styles.mstr}>
+            <div className={styles.mstx}>
+              <div className={styles.mPic}>
+                <Image
+                  src={"/sohampfp.png"}
+                  alt=""
+                  width={200}
+                  height={200}
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="/app2.png"
+                  unoptimized
+                  id={styles.cpj}
+                />
+              </div>
+              <div className={styles.mTx}><h3>Soham Raut</h3></div>
+              <p>CEO, Co-Founder</p>
+            </div>
+            <div className={styles.mstx}>
+              <div className={styles.mPic}>
+                <Image
+                  src={"/InShot_20230320_223257350.jpg"}
+                  alt=""
+                  width={200}
+                  height={200}
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="/app2.png"
+                  unoptimized
+                  id={styles.cpj}
+                />
+              </div>
+              <div className={styles.mTx}><h3>Treasure Alekhojie</h3></div>
+              <p>CEO, Founder</p>
+            </div>
+          </div>
+        </section>
         <section className={styles.payment_section}>
           <div id={styles.neon}></div>
           <div className={styles.payment_wrapper}>

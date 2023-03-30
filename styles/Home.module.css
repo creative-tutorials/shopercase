@@ -186,6 +186,48 @@ section.profile_section {
   margin-top: 5rem;
   position: relative;
 }
+section.masthead {
+  padding: 20px 65px;
+  margin-top: 5rem;
+  background: rgb(8,7,26);
+background: linear-gradient(165deg, rgba(8,7,26,1) 45%, rgba(91,48,191,1) 100%);
+}
+.masthead .mastheader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mastheader h2 {
+  font-size: 3rem;
+  color: #fff;
+}
+.mstr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.mstr .mstx {
+  padding: 25px;
+  background: #F8FAFC;
+  border: 2px solid rgb(116, 124, 145);
+  border-radius: 5px;
+}
+.mstr .mstx img  {
+  border-radius: 50%;
+}
+.mstr .mstx .mTx {
+  margin-top: 1.5rem;
+}
+.mstr .mstx .mTx h3 {
+  font-size: 1.4rem;
+}
+.mstr .mstx p {
+  font-size: 0.9rem;
+  color: #3a4153;
+  font-weight: 500;
+}
 section.profile_section #neon {
   position: absolute;
   top: 60px;
@@ -473,6 +515,30 @@ footer.footer {
     justify-content: space-between;
     flex-wrap: wrap;
   }
+  .mstr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .mstr .mstx {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+    background: #F8FAFC;
+    border: 2px solid rgb(116, 124, 145);
+    border-radius: 5px;
+  }
+  .mastheader h2 {
+    font-size: 2.4rem;
+    color: #fff;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 536px) {
   .hero_section .hero_content h1 {
@@ -745,5 +811,8 @@ footer.footer {
   }
   footer.footer .tr {
     margin-top: 1rem;
+  }
+  .mastheader h2 {
+    font-size: 2rem;
   }
 }
