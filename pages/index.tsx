@@ -5,14 +5,73 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import {
+  useState,
+  useEffect,
+  useRef,
+  JSXElementConstructor,
+  Key,
+  ReactElement,
+  ReactFragment,
+  ReactPortal,
+  SetStateAction,
+} from "react";
 import { exportRouteToSignup } from "../components/functions/exportRouteToSignup";
 const inter = Inter({ subsets: ["latin"] });
 
+function FAQ({ index, item }: any) {
+  const className = `item-${index}`;
+  return (
+    <div className={styles._qs} id={className}>
+      <div className={styles._q_fv}>
+        <span>{item.question}</span>
+        <i className="fa-sharp fa-solid fa-caret-up"></i>
+      </div>
+      <div className={styles.answer_box}>
+        <p>{item.answer}</p>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   const [blurMenuActive, setBlurMenuActive] = useState(false);
+  const [jsonData, setjsonData] = useState(null);
+  const [isActive, setisActive] = useState(false);
+  const [isMeidaHActive, setIsMeidaHActive] = useState(false);
   const router = useRouter();
   const RouteToSignup = exportRouteToSignup(router);
+  useEffect(() => {
+    function handleScroll() {
+      // replace 'header' with the actual selector for your header element
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > 0) {
+        setisActive(true); // replace 'scrolled' with the class name for the new header background
+      } else {
+        setisActive(false);
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+    fetchJSONData();
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const fetchJSONData = async () => {
+    const response = await fetch("db.json", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (response.ok) {
+      const result = await response.json();
+      setjsonData(result);
+      console.log(result);
+    }
+  };
   return (
     <>
       <Head>
@@ -33,266 +92,334 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div id={styles.App}>
-        <Header
-          styles={styles}
-          Link={Link}
-          Image={Image}
-          setBlurMenuActive={setBlurMenuActive}
-        />
-        <section className={styles.hero_section}>
-          <div className={styles.hero_content}>
-            <h1>
-              The platform you <br />
-              need to kindle <br />
-              <span className={styles.jc}>your business</span>
-            </h1>
-            <p className={styles.heroPar}>
-              Shopercase makes it easy to share, monetize <br /> and Grow your
-              brand.
-            </p>
+        <div className={styles.align}>
+          <div
+            className={styles.Header}
+            id={isActive ? styles.active : undefined}
+          >
+            <div className={styles.header_content}>
+              <div className={styles.logo}>
+                <Image
+                  src={"/icons/ShoperFrame.png"}
+                  alt={"helloworld"}
+                  width={50}
+                  height={50}
+                  blurDataURL={"$/"}
+                  placeholder={"blur"}
+                  unoptimized
+                />
+              </div>
+              <div className={styles.linkContent}>
+                <Link href={"/"}>Features</Link>
+                <Link href={"/"}>Resources</Link>
+                <Link href={"/"}>Community</Link>
+                <Link href={"/"}>Contact</Link>
+              </div>
+              <div className={styles.headerBtns} id={isActive ? styles.active : undefined}>
+                <button id={styles.btn_alpha_login_rw}>Log In</button>
+                <button id={styles.btn_alpha_signuo_w2}>Get Started</button>
+              </div>
+              <div className={styles.media}>
+                {isMeidaHActive ? (
+                  <i
+                    className="fa-solid fa-xmark"
+                    onClick={() => setIsMeidaHActive(!isMeidaHActive)}
+                  ></i>
+                ) : (
+                  <i
+                    className="fa-solid fa-bars"
+                    onClick={() => setIsMeidaHActive(!isMeidaHActive)}
+                  ></i>
+                )}
+              </div>
+            </div>
+            {isMeidaHActive ? (
+              <div className={styles.mediaH}>
+                <div className={styles.m_linkContent}>
+                  <Link href={"/"}>Features</Link>
+                  <Link href={"/"}>Resources</Link>
+                  <Link href={"/"}>Community</Link>
+                  <Link href={"/"}>Contact</Link>
+                </div>
+                <div className={styles.m_headerBtns}>
+                  <button id={styles.btn_alpha_login_rw}>Log In</button>
+                  <button id={styles.btn_alpha_signuo_w2}>Get Started</button>
+                </div>
+              </div>
+            ) : null}
           </div>
-          <div className={styles.hero_image}>
-            <Image
-              src={"/screely-1680032254255.png"}
-              alt=""
-              width={200}
-              height={200}
-              loading="lazy"
-              placeholder="blur"
-              blurDataURL="/app2.png"
-              unoptimized
-              id={styles.img}
-            />
-          </div>
-        </section>
-        <section className={styles.goal}>
-          <div className={styles.goal_header}>
-            <p>Our goal is simple</p>
-            <h2>
-              Quickly launch your online business <br /> and start monetizing
-              today!
-            </h2>
-          </div>
-          <div className={styles.goal_banner}>
-            <div className={styles.goal_image}>
+        </div>
+        <div className={styles.sections}>
+          <section className={styles.main}>
+            <div className={styles.main_cy_3s}>
+              <h2>
+                The platform you need to <br />{" "}
+                <span className={styles.highlight_}>kindle your business</span>{" "}
+              </h2>
+              <p>
+                Monetize anything online, fast and easy! <br /> Start profiting
+                from your content and products with our efficient services. Try
+                us today!
+              </p>
+              <div className={styles.jwBtn}>
+                <button id={styles.join_w}>
+                  Join the waitlist <i className="fa-light fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+            <div className={styles.main_img}>
               <Image
-                src={"/x.png"}
-                alt=""
-                width={200}
-                height={200}
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL="/app2.png"
+                src={"/screely-1682466528075.png"}
+                alt={"helloworld"}
+                width={800}
+                height={400}
+                blurDataURL={"$/"}
+                placeholder={"blur"}
                 unoptimized
-                id={styles.img}
               />
             </div>
-            <div className={styles.goalText}>
-              <h1>
-                Payments <br /> made simple
-              </h1>
+          </section>
+          <section
+            className={styles.pmi}
+            id={isActive ? styles.active : undefined}
+          >
+            <div className={styles.moi}>
+              <h3>Sell anything online</h3>
               <p>
-                Crafted to support the{" "}
-                <span id={styles.goalHubspot}>modern</span> entrepreneur,
-                creator, <br /> business and developers that seeks increased
-                efficiency.
+                Maximize your sales potential. Create content, sell faster, and
+                watch your profits skyrocket! 🚀
               </p>
             </div>
-          </div>
-        </section>
-        <section className={styles.store_section}>
-          <div className={styles.store_content}>
-            <div className={styles.graphics}>
-              <i className="fa-solid fa-stars"></i>
-            </div>
-            <div className={styles.k_card}>
-              <div className={styles.kflex}>
-                <div className={styles.kl}>
-                  <Image
-                    src={"/screely-1680047616406.png"}
-                    width={500}
-                    height={500}
-                    alt=""
-                    loading="lazy"
-                    placeholder="blur"
-                    unoptimized
-                    blurDataURL="/app.png"
-                    className={styles.image_kl}
-                  ></Image>
-                </div>
-                <div className={styles.kr}>
-                  <h1>Attract Your Customers to You</h1>
-                  <p>
-                    Gain visibility into your business&apos;s plan for big
-                    expenses, manage profits, customers and more
-                  </p>
-                  <div className={styles.mg}>
-                    <button onClick={RouteToSignup}>
-                      Get Started - It&apos;s free
+            <div className={styles._cards_wrapper}>
+              <div className={styles.card}>
+                <div className={styles.card_left}>
+                  <div className={styles.card_tp}>
+                    <h3>Digital Products</h3>
+                    <p>
+                      Create, and sell digital products right here on Shopercase
+                    </p>
+                  </div>
+                  <div className={styles.card_btm}>
+                    <button className={styles.ui_n}>
+                      Join the waitlist{" "}
+                      <i className="fa-light fa-arrow-right"></i>
                     </button>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className={styles.profile_section}>
-          <div id={styles.neon}></div>
-          <div className={styles.profile_container}>
-            <div className={styles.profileMe}>
-              <div className={styles.profile}>
-                <Image
-                  src={"/InShot_20230320_223257350.jpg"}
-                  alt=""
-                  width={200}
-                  height={200}
-                  loading="lazy"
-                  placeholder="blur"
-                  blurDataURL="/app2.png"
-                  unoptimized
-                  id={styles.img}
-                />
-              </div>
-              <div className={styles.profile_content}>
-                <div className={styles.quote}>
-                  <i className="fa-solid fa-quote-left"></i>
+                <div className={styles.card_righ}>
+                  <div className={styles.ImgCard}>
+                    <Image
+                      src={"/submit.png"}
+                      alt={"helloworld"}
+                      width={400}
+                      height={400}
+                      blurDataURL={"$/"}
+                      placeholder={"blur"}
+                      unoptimized
+                    />
+                  </div>
                 </div>
-                <p id={styles.testify}>
-                  I highly recommend Shopercase to anyone looking to sell their
-                  products online. <br /> It&apos;s a powerful platform
-                  that&apos;s easy to use, <br /> and the team behind it is
-                  always innovating and improving
-                </p>
-                <p id={styles.creator}>Treasure Alekhojie</p>
-                <p id={styles.title}>CEO, Founder</p>
+              </div>
+              <div className={styles.card}>
+                <div className={styles.card_left}>
+                  <div className={styles.card_tp}>
+                    <h3>Physical Products</h3>
+                    <p>
+                      Create, and sell physical products right here on
+                      Shopercase
+                    </p>
+                  </div>
+                  <div className={styles.card_btm}>
+                    <button className={styles.ui_n}>
+                      Join the waitlist{" "}
+                      <i className="fa-light fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+                <div className={styles.card_righ}>
+                  <div className={styles.ImgCard}>
+                    <Image
+                      src={"/stocks.png"}
+                      alt={"helloworld"}
+                      width={400}
+                      height={400}
+                      blurDataURL={"$/"}
+                      placeholder={"blur"}
+                      unoptimized
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section className={styles.masthead}>
-          <div className={styles.mastheader}>
-            <h2>Meet the founders</h2>
-          </div>
-          <div className={styles.mstr}>
-            <div className={styles.mstx}>
-              <div className={styles.mPic}>
-                <Image
-                  src={"/sohampfp.png"}
-                  alt=""
-                  width={200}
-                  height={200}
-                  loading="lazy"
-                  placeholder="blur"
-                  blurDataURL="/app2.png"
-                  unoptimized
-                  id={styles.cpj}
-                />
-              </div>
-              <div className={styles.mTx}><h3>Soham Raut</h3></div>
-              <p>CEO, Co-Founder</p>
+          </section>
+          <section
+            className={styles.faq}
+            id={isActive ? styles.active : undefined}
+          >
+            <div className={styles.faqHeader}>
+              <h3>Frequently Asked Questions</h3>
             </div>
-            <div className={styles.mstx}>
-              <div className={styles.mPic}>
-                <Image
-                  src={"/InShot_20230320_223257350.jpg"}
-                  alt=""
-                  width={200}
-                  height={200}
-                  loading="lazy"
-                  placeholder="blur"
-                  blurDataURL="/app2.png"
-                  unoptimized
-                  id={styles.cpj}
-                />
-              </div>
-              <div className={styles.mTx}><h3>Treasure Alekhojie</h3></div>
-              <p>CEO, Founder</p>
+
+            <div
+              className={styles.q_wrapper}
+              id={isActive ? styles.active : undefined}
+            >
+              {jsonData ? (
+                <>
+                  {jsonData.map(
+                    (
+                      item: {
+                        question:
+                          | string
+                          | number
+                          | boolean
+                          | ReactElement<
+                              any,
+                              string | JSXElementConstructor<any>
+                            >
+                          | ReactFragment
+                          | ReactPortal
+                          | null
+                          | undefined;
+                        answer:
+                          | string
+                          | number
+                          | boolean
+                          | ReactElement<
+                              any,
+                              string | JSXElementConstructor<any>
+                            >
+                          | ReactFragment
+                          | ReactPortal
+                          | null
+                          | undefined;
+                      },
+                      index: Key | null | undefined
+                    ) => (
+                      <FAQ key={index} index={index} item={item} />
+                    )
+                  )}
+                </>
+              ) : null}
             </div>
-          </div>
-        </section>
-        <section className={styles.payment_section}>
-          <div id={styles.neon}></div>
-          <div className={styles.payment_wrapper}>
-            <div className={styles.pyicon}>
-              <div className={styles.pyicon_header}>
-                <h2>
-                  Payment <br /> Solutions
-                </h2>
-                <p className={styles.animtypewriter}>
-                  Shopercase handles payments via Lemonsquezzy - it&apos;s that
-                  easy!
-                </p>
+          </section>
+          <section className={styles.waitG_w} id={isActive ? styles.active : undefined}>
+            <div className={styles.w_hw}>
+              <h3>Be the first to try Shopercase</h3>
+              <p>
+                Join the waitlist to experience and help us improve our early
+                preview of Shopercase.
+              </p>
+              <div className={styles.jwfAf3c}>
+                <button id={styles.juq}>
+                  Join the waitlist <i className="fa-light fa-arrow-right"></i>
+                </button>
               </div>
+            </div>
+            <div className={styles.ocImg}>
               <Image
-                src={"/icons/SBDi9PA-_400x400 1.png"}
-                alt=""
-                width={80}
-                height={80}
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL="/app2.png"
+                src={"/screely-1682445815201.png"}
+                alt={"helloworld"}
+                width={800}
+                height={500}
+                blurDataURL={"$/"}
+                placeholder={"blur"}
                 unoptimized
-                id={styles.msj}
               />
             </div>
-          </div>
-        </section>
-        <section className={styles.sub_section}>
-          <div className={styles.sub_container}>
-            <div className={styles.subHeader}>
-              <h1>
-                Be one of the exclusive 1,682 users <br /> eagerly awaiting our
-                launch
-              </h1>
+          </section>
+          <section className={styles.contact_wxi3} id={isActive ? styles.active : undefined}>
+            <div className={styles.cnth}>
+              <h3>Get in touch</h3>
+              <p>
+                Let&apos;s get connected! If you have any questions, please
+                don&apos;t hesitate to reach out to us.
+              </p>
             </div>
-            <div className={styles.subscribewrapper}>
-              <button className={styles.subcribeBtn} onClick={RouteToSignup}>
-                Sign Up
-              </button>
+            <div className={styles.cntCard}>
+              <div className={styles.cn_lft}>
+                <div className={styles.cn_lft_hw3u}>
+                  <h3>Have a question?</h3>
+                  <p>
+                    If you have any questions you would like to share with us,
+                    please feel free to reach out to us on our social media
+                    handles.
+                  </p>
+                </div>
+                <div className={styles.btm}>
+                  <Link href={"https://twitter.com/shopercase_inc"} target="blank">
+                    <i className="fa-brands fa-twitter"></i>
+                  </Link>
+                  <Link
+                    href={"https://instagram.com/shopercase_inc"}
+                    target="blank"
+                  >
+                    <i className="fa-brands fa-instagram"></i>
+                  </Link>
+                </div>
+              </div>
+              <div className={styles.cn_rgt}>
+                <div className={styles.cn_rgt_img}>
+                  <Image
+                    src={"/wepik-export-20230425160108.png"}
+                    alt={"helloworld"}
+                    width={400}
+                    height={400}
+                    blurDataURL={"$/"}
+                    placeholder={"blur"}
+                    unoptimized
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        </section>
-        <footer className={styles.footer}>
-          <div className={styles.footer_wrapper}>
-            <div className={styles.top}>
-              <div className={styles.tl}>
-                <div className={styles.tltop}>
-                  <p id={styles.info}>Helpful links</p>
-                  <div className={styles.links}>
-                    <Link href={"/"}>Join our club</Link>
-                    <Link href={"/blog"}>Blog</Link>
+          </section>
+          <footer className={styles.endFooter}>
+            <div className={styles.fw_flx}>
+              <div className={styles.fw_logo}>
+                <Image src={'/icons/ShoperFrame.png'} alt={'helloworld'} width={50} height={50} blurDataURL={'$/'} placeholder={'blur'} unoptimized />
+              </div>
+              <div className={styles.gapLinks}>
+                <div className={styles.order}>
+                  <div className={styles.pr}><p>Product</p></div>
+                  <div className={styles.fw_link}>
+                    <Link href={'/'}>Features</Link>
+                    <Link href={'/'}>AI</Link>
                   </div>
-                  <div className={styles.bottom}>
-                    <div className={styles.bottom_links}>
-                      <Link href={"https://twitter.com/shopercase_inc"}>
-                        <i className="fa-brands fa-twitter"></i>
-                      </Link>
-                      <Link
-                        href={
-                          "https://www.linkedin.com/in/shopercase-inc-2a8863264"
-                        }
-                      >
-                        <i className="fa-brands fa-linkedin"></i>
-                      </Link>
-                      <Link
-                        href={
-                          "https://join.slack.com/t/shopercase/shared_invite/zt-1sb5gnc9w-RlHbrUDpIQbbn0G8yn~Pzw"
-                        }
-                      >
-                        <i className="fa-brands fa-slack"></i>
-                      </Link>
-                    </div>
+                </div>
+                <div className={styles.order}>
+                  <div className={styles.pr}><p>Resources</p></div>
+                  <div className={styles.fw_link}>
+                    <Link href={'/'}>Docs</Link>
+                    <Link href={'/'}>Tutorials</Link>
+                  </div>
+                </div>
+                <div className={styles.order}>
+                  <div className={styles.pr}><p>Company</p></div>
+                  <div className={styles.fw_link}>
+                    <Link href={'/'}>Careers</Link>
+                    <Link href={'/'}>Terms & Condtions</Link>
+                    <Link href={'/'}>Privacy</Link>
+                  </div>
+                </div>
+                <div className={styles.order}>
+                  <div className={styles.pr}><p>Contact</p></div>
+                  <div className={styles.fw_link}>
+                    <Link href={'/contact'}>@shopercase_inc</Link>
                   </div>
                 </div>
               </div>
-              <div className={styles.tr}>
-                <p>
-                  Copyright &copy; 2023 Shopercase, Inc. All rights reserved
-                </p>
+            </div>
+            <div className={styles.fw_btm}>
+              <div className={styles.copywright}>
+                <p>&copy;2023 - Shopercase, Inc.</p>
+              </div>
+              <div className={styles.socials}>
+                <Link href={'/'}><i className="fa-brands fa-twitter"></i></Link>
+                <Link href={'/'}><i className="fa-brands fa-instagram"></i></Link>
               </div>
             </div>
-          </div>
-        </footer>
+          </footer>
+        </div>
       </div>
     </>
   );

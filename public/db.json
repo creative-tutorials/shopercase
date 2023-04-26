@@ -1,21 +1,32 @@
 [
   {
-    "name": "Timi",
-    "age": 12,
-    "status": "online",
-    "gender": "male"
+    "id": 1,
+    "question": "Why is there a waitlist?",
+    "answer": "Shoppercase is currently in beta, which is an exciting stage where we are actively trying different approaches, improving our tech stack, and enhancing the platform's security before it is released to everyone."
   },
   {
-    "name": "XS",
-    "age": 12,
-    "status": "online",
-    "gender": "male"
+    "id": 2,
+    "question": "When can I use Shopercase?",
+    "answer": "Our team is working as fast as we can to ensure that we can get as many users as possible to test and use our platform. Keep an eye on your inbox, as we will let you know when you can test the platform. Thank you for your patience!"
   },
   {
-    "name": "AS",
-    "age": 12,
-    "status": "online",
-    "gender": "male"
+    "id": 3,
+    "question": "Is there a paid plan?",
+    "answer": "When we launch, Shopercase will be free for a limited time. However, as Shopercase AI is introduced and new features emerge, we will be introducing a paid plan. Stay tuned for more information!"
+  },
+  {
+    "id": 4,
+    "question": "Why is there a waitlist?",
+    "answer": "Shopercase is in beta, meaning we are trying different things, improving our tech stack, and making the platform secure before it is released to everyone."
+  },
+  {
+    "id": 5,
+    "question": "How will Shopercase use my data?",
+    "answer": "At Shopercase, we will only use the data that you provide to us. We will not ask you for additional data unless it is necessary, and we will always obtain your consent. You can choose to opt-out at any time. Please note that we will not sell your data. However, we will collect some device information to help us fix bugs and ensure that the app works correctly. You can find more information about the data we collect in our Privacy Docs"
+  },
+  {
+    "id": 6,
+    "question": "I have more questions Who can I talk to?",
+    "answer": "Chat us on twitter @shopercase_inc"
   }
 ]
-  
