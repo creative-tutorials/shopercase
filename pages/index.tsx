@@ -36,7 +36,7 @@ function FAQ({ index, item }: any) {
 
 export default function Home() {
   const [blurMenuActive, setBlurMenuActive] = useState(false);
-  const [jsonData, setjsonData] = useState(null);
+  const [jsonData, setjsonData] = useState([]);
   const [isActive, setisActive] = useState(false);
   const [isMeidaHActive, setIsMeidaHActive] = useState(false);
   const router = useRouter();
