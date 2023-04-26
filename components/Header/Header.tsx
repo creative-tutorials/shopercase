@@ -25,8 +25,8 @@ export function Header({ styles, Link, Image, setBlurMenuActive }: any) {
           </div>
           <div id={styles.links}>
             <Link href={"/"}>Home</Link>
-            <Link href={"/#pricing"}>Blogs</Link>
-            <Link href={"/#contact"}>Join our club</Link>
+            <Link href={"/blogs"}>Blogs</Link>
+            <Link href={"/contact"}>Contact us</Link>
           </div>
         </div>
         <div id={styles.header_cr}>
@@ -45,8 +45,8 @@ export function Header({ styles, Link, Image, setBlurMenuActive }: any) {
           <div className={ishidden ? styles.dropdown : styles.show}>
             <div className={styles.mobileLink}>
             <Link href={"/"}>Home</Link>
-            <Link href={"/#pricing"}>Blogs</Link>
-            <Link href={"/#contact"}>Join our club</Link>
+            <Link href={"/blogs"}>Blogs</Link>
+            <Link href={"/contact"}>Contact us</Link>
             </div>
           </div>
         </div>
