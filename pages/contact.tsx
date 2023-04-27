@@ -13,7 +13,7 @@ export default function Contact() {
   const messageRef: any = useRef();
   const submitForm = async () => {
     try {
-      const response = await fetch("http://localhost:8080/contact", {
+      const response = await fetch("https://api-shopercase.vercel.app/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

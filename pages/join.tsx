@@ -73,19 +73,21 @@ export default function WaitingListPage() {
     setIsCaptchaResolved(false);
   };
   const submitRequest = async () => {
-    console.log(reference, fNameVal.current.value, emailVal.current.value);
     try {
-      const response = await fetch("https://api-shopercase.vercel.app/joinbeta", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          fullName: fNameVal.current.value,
-          email: emailVal.current.value,
-          reference: reference,
-        }),
-      });
+      const response = await fetch(
+        "https://api-shopercase.vercel.app/joinbeta",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullName: fNameVal.current.value,
+            email: emailVal.current.value,
+            reference: reference,
+          }),
+        }
+      );
       if (response.ok) {
         const result = await response.json();
         console.log(result);
