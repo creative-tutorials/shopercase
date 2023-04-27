@@ -2,31 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/* Variables storing colors  */
-:root {
-  --ligth-theme: #ffffff;
-  --dark-theme: #1f2732;
-  --dark-theme2: #151b24;
-  --dark-theme3: #111417;
-  --font-choice: "Poppins";
-  --smokey-black-color: #070600;
-  --rasin-black-color: #212227;
-  --dark-blue-custom-color: #222733;
-  --charcoal-dark-color: #95a2af;
-  --busted-dark-color: #192028;
-  --unstable-dark-color: #222831;
-  --alice-blue: #e9f1f7;
-  --alabaser-whitish-color: #e0dfd5;
-  --not-so-white-color: #eeeeee;
-  --blue-first-color: #1140a4;
-  --blue-first-hover-color: #183c8a;
-  --blue-second-color: #7ca5b8;
-  --blue-third-color: #38369a;
-  --blue-fourth-color: #6665dd;
-  --blue-fifth-color: #473bf0;
-  --gentle-blue-color: #bebdf0;
-  --smile-for-the-camera: #a7a1f8;
-}
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 * {
   margin: 0;
   padding: 0;

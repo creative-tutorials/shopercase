@@ -121,10 +121,13 @@
   outline: none;
   border: none;
   font-size: 1.2rem;
-  color: #fff;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+.jwBtn #join_w a {
+  color: #fff;
+  text-decoration: none;
 }
 .jwBtn #join_w i {
   font-size: 0.9rem;
@@ -213,10 +216,13 @@ section.pmi#active .moi p {
   outline: none;
   border: none;
   font-size: 1.2rem;
-  color: #fff;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+.card .card_btm .ui_n a {
+  color: #fff;
+  text-decoration: none;
 }
 .card .card_btm .ui_n:hover {
   background-color: rgb(47, 85, 202);
@@ -354,10 +360,13 @@ section.waitG_w#active .w_hw p {
   outline: none;
   border: none;
   font-size: 1.2rem;
-  color: #fff;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+.jwfAf3c #juq a {
+  color: #fff;
+  text-decoration: none;
 }
 .jwfAf3c #juq:hover {
   background-color: rgb(47, 85, 202);

@@ -2,6 +2,7 @@
   "name": "shopercase",
   "version": "2.3.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,6 +14,7 @@
     "@types/node": "18.16.1",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
+    "@vercel/analytics": "^1.0.0",
     "crisp-sdk-web": "^1.0.15",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",

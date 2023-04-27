@@ -2,13 +2,15 @@ import { useState, useRef } from "react";
 import ctt from "../styles/contact.module.css";
 import Head from "next/head";
 import Link from "next/link";
+import AlertNotify from "../components/function/alert/alertNotify";
+
 export default function Contact() {
   const [message, setMessage] = useState("");
   const [isAlert, setIsAlert] = useState(false);
   const [isErr, setIsErr] = useState(false);
-  const nameRef:any = useRef();
-  const emailRef:any = useRef();
-  const messageRef:any = useRef();
+  const nameRef: any = useRef();
+  const emailRef: any = useRef();
+  const messageRef: any = useRef();
   const submitForm = async () => {
     try {
       const response = await fetch("http://localhost:8080/contact", {
@@ -28,7 +30,7 @@ export default function Contact() {
         console.log(result);
         setMessage(result.message);
         setIsAlert(true);
-        setIsErr(false)
+        setIsErr(false);
         setTimeout(() => {
           setMessage("");
           setIsAlert(false);
@@ -39,11 +41,11 @@ export default function Contact() {
         console.log(result);
         setMessage(result.message);
         setIsAlert(true);
-        setIsErr(true)
+        setIsErr(true);
         setTimeout(() => {
           setMessage("");
           setIsAlert(false);
-          setIsErr(false)
+          setIsErr(false);
         }, 2500);
       }
     } catch (err) {
@@ -99,9 +101,15 @@ export default function Contact() {
           </div>
         </div>
         <div className={ctt.info_z}>
-          <i className="fa-solid fa-fire"></i> Powered by <Link href={'https://shopercase.gitbook.io/shoperform-api/'} target="blank">shoperform</Link>
+          <i className="fa-solid fa-fire"></i> Powered by{" "}
+          <Link
+            href={"https://shopercase.gitbook.io/shoperform-api/"}
+            target="blank"
+          >
+            shoperform
+          </Link>
         </div>
-        {isAlert ? <div className={ctt.alertNotify} id={isErr ? ctt.alrtErr : undefined}>{message}</div> : null}
+        {isAlert ? <AlertNotify message={message} isErr={isErr} /> : null}
       </div>
     </>
   );

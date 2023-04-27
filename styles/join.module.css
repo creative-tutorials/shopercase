@@ -1,0 +1,214 @@
+.JoinPage .cards {
+  padding: 30px;
+  margin-top: 8rem;
+}
+.cards .card {
+  position: fixed;
+  left: 25px;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 3px 50px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.cards .card#active:nth-child(2) {
+  transform: translateY(-35px);
+}
+.cards .card:nth-child(1) {
+  transform: translateY(210px);
+}
+.cards .card#active:nth-child(1) {
+  transform: translateY(0px);
+}
+.cards .card#active {
+  opacity: 1;
+  visibility: visible;
+}
+.cards .card .cardHeader h3 {
+  font-size: 1.4rem;
+}
+.cards .card .cardHeader p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.cards .card .cardHeader p a {
+  text-decoration: none;
+  color: rgb(47, 85, 202);
+}
+.customCaptcha {
+  margin-top: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.customCaptcha input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+.customCaptcha input[type="checkbox"]:checked + label {
+  color: rgb(65, 105, 225);
+}
+.customCaptcha label {
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  font-family: "Andika", sans-serif;
+  color: rgb(50, 54, 67);
+}
+
+.Btn_cTA {
+  margin-top: 1.5rem;
+}
+.Btn_cTA #continue {
+  padding: 15px 25px;
+  background-color: rgb(65, 105, 225);
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+#continue:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.CardForm {
+  margin-top: 1.6rem;
+  display: flex;
+  gap: 2rem;
+}
+.CardForm .cardInput {
+  width: 100%;
+}
+.CardForm .cardInput input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 15px;
+  outline: none;
+  border: 1.7px solid #bfbfbf;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.CardForm .cardInput input:focus:is(.invalid) {
+  border-color: #f20c23;
+}
+.CardForm .cardInput input:is(:focus) {
+  border-color: rgb(65, 105, 225);
+}
+.CardForm .cardInput {
+  position: relative;
+}
+.CardForm .cardInput label {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+.CardForm .cardInput input:is(:focus) + label {
+  top: 6px;
+  left: 10px;
+  color: rgb(65, 105, 225);
+  background-color: #fff;
+}
+.CardForm .cardInput input:focus:is(.invalid) + label {
+  color: #f20c23;
+}
+.cardDrpDwnContainer {
+  margin-top: 1rem;
+}
+.drpdwn_element select {
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  border: 2px solid #bfbfbf;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: "";
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+}
+.drpdwn_element option {
+  padding: 15px;
+}
+.m_w3 {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.m_w3 #saveChng {
+  padding: 15px 25px;
+  background-color: rgb(65, 105, 225);
+  color: #fff;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.m_w3 #saveChng:hover {
+  background-color: rgb(47, 85, 202);
+}
+.m_w3 #goBack {
+  padding: 15px 25px;
+  background-color: rgb(50, 54, 67);
+  color: #fff;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.m_w3 #goBack:hover {
+  background-color: rgb(35, 37, 46);
+}
+.Footer {
+  padding: 25px;
+  gap: 2rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: -1;
+}
+._footer_cnt {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: right;
+}
+._uxa {
+  color: #fefefe;
+}
+._uxa a {
+  color: #fefefe;
+  font-weight: 500;
+  text-decoration: none;
+}
+._uxa a:hover {
+  color: rgb(202, 212, 244);
+  text-decoration: none;
+}
+@media screen and (max-width: 805px) {
+  .JoinPage .cards {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 579px) {
+  .CardForm {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
