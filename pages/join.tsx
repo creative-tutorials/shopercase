@@ -1,4 +1,5 @@
-import { useEffect, useState, LegacyRef, RefObject, useRef } from "react";
+import { useState, useRef } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import jnn from "../styles/join.module.css";
@@ -34,12 +35,14 @@ interface RequestVal {
     | any;
 }
 export default function WaitingListPage() {
+  const router = useRouter();
   const [isCaptchaResolved, setIsCaptchaResolved] = useState(false);
   const [isActive, setisActive] = useState(false);
   const [isMeidaHActive, setIsMeidaHActive] = useState(false);
   const [isFirstCardActive, setIsFirstCardActive] = useState(true);
   const [isSecondCardActive, setIsSecondCardActive] = useState(false);
   const [message, setMessage] = useState("");
+  const [reference, setReference] = useState("");
   const [isAlert, setIsAlert] = useState(false);
   const [isErr, setIsErr] = useState(false);
   const captcha: CaptchaRef = useRef();
@@ -54,17 +57,14 @@ export default function WaitingListPage() {
   };
   const checkIfInputisValid = (event: InputEvent) => {
     if (event.target.value === "") {
-      console.log("isBlank");
       event.target.classList.add(jnn.invalid);
     } else {
-      console.log("isNotBlank");
       event.target.classList.remove(jnn.invalid);
     }
   };
   const resolveCaptcha = () => {
     if (captcha.current !== null) {
       captcha.current.checked = false;
-      console.log(captcha.current.checked);
     }
   };
   const performThreeActions = () => {
@@ -73,6 +73,7 @@ export default function WaitingListPage() {
     setIsCaptchaResolved(false);
   };
   const submitRequest = async () => {
+    console.log(reference, fNameVal.current.value, emailVal.current.value);
     try {
       const response = await fetch("http://localhost:8080/joinbeta", {
         method: "POST",
@@ -82,6 +83,7 @@ export default function WaitingListPage() {
         body: JSON.stringify({
           fullName: fNameVal.current.value,
           email: emailVal.current.value,
+          reference: reference,
         }),
       });
       if (response.ok) {
@@ -93,6 +95,7 @@ export default function WaitingListPage() {
         setTimeout(() => {
           setMessage("");
           setIsAlert(false);
+          router.reload();
         }, 2500);
       } else {
         const result = await response.json();
@@ -109,11 +112,6 @@ export default function WaitingListPage() {
       console.error(err);
     }
   };
-  useEffect(() => {
-    isSecondCardActive ? console.log("active") : console.error("ERR");
-
-    return () => {};
-  }, [isSecondCardActive]);
 
   return (
     <>
@@ -221,7 +219,11 @@ export default function WaitingListPage() {
             </div>
             <div className={jnn.cardDrpDwnContainer}>
               <div className={jnn.drpdwn_element}>
-                <select name="" id="">
+                <select
+                  name=""
+                  id=""
+                  onChange={(e) => setReference(e.target.value)}
+                >
                   <option value="select an option" disabled>
                     Where did you hear about us
                   </option>
