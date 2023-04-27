@@ -62,7 +62,7 @@
   padding: 18px;
   transition: all 0.2s ease-in-out;
 }
-.contact_container .btn button:hover  {
+.contact_container .btn button:hover {
   background-color: rgb(47, 85, 202);
 }
 .contactPage .info_z {
@@ -75,6 +75,7 @@
   font-weight: 500;
   text-decoration: none;
 }
+
 .contactPage .info_z a:hover {
   color: rgb(202, 212, 244);
   text-decoration: none;

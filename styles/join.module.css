@@ -196,10 +196,21 @@
   color: #fefefe;
   font-weight: 500;
   text-decoration: none;
+  animation: sli_dwn 0.9s forwards infinite;
 }
 ._uxa a:hover {
-  color: rgb(202, 212, 244);
-  text-decoration: none;
+  color: rgb(65, 105, 225);
+  text-decoration: underline;
+  animation: none;
+}
+@keyframes sli_dwn {
+  from {
+    color: rgb(65, 105, 225);
+    text-decoration: underline;
+  }
+  to {
+    color: #fefefe;
+  }
 }
 @media screen and (max-width: 805px) {
   .JoinPage .cards {
