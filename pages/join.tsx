@@ -75,7 +75,7 @@ export default function WaitingListPage() {
   const submitRequest = async () => {
     console.log(reference, fNameVal.current.value, emailVal.current.value);
     try {
-      const response = await fetch("http://localhost:8080/joinbeta", {
+      const response = await fetch("https://api-shopercase.vercel.app/joinbeta", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
