@@ -1,6 +1,6 @@
 # Shopercase
 
-Shopercase is an open marketplace, which means that anyone can sign up as a seller and start listing their products immediately. The platform caters to a wide range of sellers, from individual entrepreneurs to small businesses and large corporations.
+Shopercase is an ecommerce platform designed to simplify the process of selling products and services online. It offers an easy-to-use interface that allows merchants to create an online store, list their products, and manage their sales with ease.
 
 ## More About Shopercase
 
