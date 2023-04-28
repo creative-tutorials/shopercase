@@ -21,8 +21,8 @@ export default function PageFooter({styles}:any) {
               <p>Product</p>
             </div>
             <div className={styles.fw_link}>
-              <Link href={"/"}>Features</Link>
-              <Link href={"/"}>AI</Link>
+              <Link href={"/features"}>Features</Link>
+              <Link href={"/ai"}>AI</Link>
             </div>
           </div>
           <div className={styles.order}>
@@ -30,8 +30,8 @@ export default function PageFooter({styles}:any) {
               <p>Resources</p>
             </div>
             <div className={styles.fw_link}>
-              <Link href={"/"}>Docs</Link>
-              <Link href={"/"}>Tutorials</Link>
+              <Link href={"https://tinyurl.com/yvxe7c34"}>Docs</Link>
+              <Link href={"/tutorials"}>Tutorials</Link>
             </div>
           </div>
           <div className={styles.order}>
@@ -39,9 +39,9 @@ export default function PageFooter({styles}:any) {
               <p>Company</p>
             </div>
             <div className={styles.fw_link}>
-              <Link href={"/"}>Careers</Link>
-              <Link href={"/"}>Terms & Condtions</Link>
-              <Link href={"/"}>Privacy</Link>
+              <Link href={"/careers"}>Careers</Link>
+              <Link href={"https://tinyurl.com/5n6chppm"}>Terms & Condtions</Link>
+              <Link href={"https://tinyurl.com/2p9zkc8x"}>Privacy</Link>
             </div>
           </div>
           <div className={styles.order}>

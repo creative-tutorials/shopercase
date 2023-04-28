@@ -27,17 +27,17 @@ export default function PageHeader({
           />
         </div>
         <div className={styles.linkContent}>
-          <Link href={"/"}>Features</Link>
-          <Link href={"/"}>Resources</Link>
-          <Link href={"/"}>Community</Link>
-          <Link href={"/"}>Contact</Link>
+          <Link href={"/features"}>Features</Link>
+          <Link href={"/resources"}>Resources</Link>
+          <Link href={"/community"}>Community</Link>
+          <Link href={"/contact"}>Contact</Link>
         </div>
         <div
           className={styles.headerBtns}
           id={isActive ? styles.active : undefined}
         >
-          <button id={styles.btn_alpha_login_rw}>Log In</button>
-          <button id={styles.btn_alpha_signuo_w2}>Get Started</button>
+          <button id={styles.btn_alpha_login_rw}><Link href={'/join'}>Log In</Link></button>
+          <button id={styles.btn_alpha_signuo_w2}><Link href={'/join'}>Get Started</Link></button>
         </div>
         <div className={styles.media}>
           {isMeidaHActive ? (
@@ -56,14 +56,14 @@ export default function PageHeader({
       {isMeidaHActive ? (
         <div className={styles.mediaH}>
           <div className={styles.m_linkContent}>
-            <Link href={"/"}>Features</Link>
-            <Link href={"/"}>Resources</Link>
-            <Link href={"/"}>Community</Link>
-            <Link href={"/"}>Contact</Link>
+            <Link href={"/features"}>Features</Link>
+            <Link href={"/resources"}>Resources</Link>
+            <Link href={"/community"}>Community</Link>
+            <Link href={"/contact"}>Contact</Link>
           </div>
           <div className={styles.m_headerBtns}>
-            <button id={styles.btn_alpha_login_rw}>Log In</button>
-            <button id={styles.btn_alpha_signuo_w2}>Get Started</button>
+            <button id={styles.btn_alpha_login_rw}><Link href={'/join'}>Log In</Link></button>
+            <button id={styles.btn_alpha_signuo_w2}><Link href={'/join'}>Get Started</Link></button>
           </div>
         </div>
       ) : null}
