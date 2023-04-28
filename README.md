@@ -21,7 +21,10 @@ The following table outlines the technologies used in Shopercase:
 | MongoDB     | ![MongoDB](https://img.icons8.com/color/48/000000/mongodb.png) |
 | Express     | ![Express](https://img.icons8.com/color/48/000000/express.png) |
 | Swiper.js   | ![Swiperjs](https://user-images.githubusercontent.com/68476321/234961954-ba269099-3ff2-4f64-b416-4173530e1b07.png) |
+| Supabase    | ![supabase-removebg-preview](https://user-images.githubusercontent.com/68476321/235067747-24ff385c-5e80-4469-ab68-0c4490b4632d.png)
+| NextJS      | ![next-js-icon-128x128-u07ijvkb](https://user-images.githubusercontent.com/68476321/235068378-4be15e41-4678-46c2-8a6e-3e8ed8b1ecd4.jpg)
 
 ## Copyright/License
+
 
 Shopercase is licensed under the MIT License. Copyright (c) 2023, Shopercase.
