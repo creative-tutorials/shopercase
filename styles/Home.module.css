@@ -190,6 +190,9 @@ section.pmi#active .moi p {
 ._cards_wrapper .card:nth-child(2) {
   margin-top: 3rem;
 }
+._cards_wrapper .card:nth-child(3) {
+  margin-top: 3rem;
+}
 .card .ImgCard {
   background-color: #191a1c;
   padding: 15px;
