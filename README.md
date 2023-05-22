@@ -8,7 +8,7 @@ Shopercase is an open marketplace, which means that anyone can sign up as a sell
 
 ## Privacy Policy
 
-Shopercase is committed to protecting your privacy. Our privacy policy can be found [here](https://www.shopercase.com/privacy-policy).
+Shopercase is committed to protecting your privacy. Our privacy policy can be found [here](https://shopercase.gitbook.io/shopercase/faqs/what-is-shopercase/privacy-policy).
 
 ## Tech Stack
 
