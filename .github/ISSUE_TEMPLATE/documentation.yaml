@@ -12,43 +12,26 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: description
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Description
+      description: A breif description of what is wrong
+      placeholder: Tell us what is wrong
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
   - type: textarea
-    id: logs
+    id: screenshots
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
+      label: Screenshots
+      description: Please include a screenshot if needed
+    validations:
+      required: true
+  - type: textarea
+    id: additonal-info
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: Additional inforamtion
+      description: Is there anything we should know about
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        You can also join our Discord channel [here]("expired.html")
