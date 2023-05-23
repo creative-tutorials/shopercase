@@ -17,7 +17,7 @@ body:
       placeholder: Start journey here
     validations:
       required: true
-  - type: input
+  - type: file
     id: screenshots
     attributes:
       label: Screenshost
