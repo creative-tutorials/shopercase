@@ -31,7 +31,6 @@ body:
     attributes:
       label: What browsers are you seeing the problem on?
       description: Tell us what you see!
-      multiple: true
       options:
         - Firefox
         - Chrome
