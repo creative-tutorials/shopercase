@@ -1,0 +1,26 @@
+name: 🤩 Testimonials
+description: What would you like to say about our platform
+title: "[NEW Testimonials]: "
+labels: ["tesimonials", "create-testimonials"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If you love it something about it, share it
+  - type: input
+    id: username
+    attributes:
+      label: Username
+      description: Enter your twitter handle
+      placeholder: E.g. @devtreasure_
+    validations:
+      required: true
+   - type: textarea
+    id: message
+    attributes:
+      label: Message
+      description: Enter your heartfelt message
+    validations:
+      required: true
