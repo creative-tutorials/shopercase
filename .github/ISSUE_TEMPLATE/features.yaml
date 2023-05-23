@@ -25,11 +25,11 @@ body:
       placeholder: Start journey here
     validations:
       required: true
-  - type: checkboxes
-    id: terms
+    body:
+  - type: markdown
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      value: "## Welcome!"
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug! If you need real-time help, join us on Discord.
