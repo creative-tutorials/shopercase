@@ -25,7 +25,7 @@ body:
       placeholder: Start journey here
     validations:
       required: true
- - type: checkbox
+  - type: checkbox
     id: terms
     attributes:
       label: Code of Conduct
