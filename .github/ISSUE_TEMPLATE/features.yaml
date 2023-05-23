@@ -33,7 +33,5 @@ body:
       placeholder: Addition information
     validations:
       required: true
-- type: markdown
-    attributes:
-      value: |
-        You can also check out our discord channel [here]("https://example.com")
+- type: text
+    You can hello world
