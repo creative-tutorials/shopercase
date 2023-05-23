@@ -25,11 +25,3 @@ body:
       placeholder: Start journey here
     validations:
       required: true
- - type: textarea
-    id: info
-    attributes:
-      label: Info
-      description: Share any additional information concering this feature
-      placeholder: Addition information
-    validations:
-      required: true
