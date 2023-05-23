@@ -30,6 +30,7 @@ body:
     id: browsers
     attributes:
       label: What browsers are you seeing the problem on?
+      placeholder: Tell us what you see!
       multiple: true
       options:
         - Firefox
