@@ -17,10 +17,18 @@ body:
       placeholder: Start journey here
     validations:
       required: true
-  - type: file
+  - type: textarea
     id: screenshots
     attributes:
       label: Screenshost
+      description: You can start by sharing an image or a video describing the feature
+      placeholder: Start journey here
+    validations:
+      required: true
+- type: textarea
+    id: info
+    attributes:
+      label: info
       description: You can start by sharing an image or a video describing the feature
       placeholder: Start journey here
     validations:
