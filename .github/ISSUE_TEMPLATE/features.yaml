@@ -17,37 +17,23 @@ body:
       placeholder: Start journey here
     validations:
       required: true
-  - type: dropdown
-    id: version
+  - type: file
+    id: screenshots
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+      label: Screenshost
+      description: You can start by sharing an image or a video describing the feature
+      placeholder: Start journey here
     validations:
       required: true
-  - type: dropdown
-    id: browsers
+ - type: textarea
+    id: info
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
+      label: Info
+      description: Share any additional information concering this feature
+      placeholder: Addition information
+    validations:
+      required: true
+- type: markdown
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      value: |
+        You can also check out our discord channel [here]("https://example.com")
