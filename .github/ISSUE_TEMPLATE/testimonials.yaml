@@ -17,7 +17,7 @@ body:
       placeholder: E.g. @devtreasure_
     validations:
       required: true
-   - type: textarea
+  - type: textarea
     id: message
     attributes:
       label: Message
