@@ -25,3 +25,7 @@ body:
       placeholder: Start journey here
     validations:
       required: true
+        - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this feature report!
