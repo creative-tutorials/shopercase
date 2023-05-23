@@ -15,7 +15,6 @@ body:
       label: Description
       description: A brief description of the feature you need to be added
       placeholder: Start journey here
-      value: ""
     validations:
       required: true
   - type: dropdown
