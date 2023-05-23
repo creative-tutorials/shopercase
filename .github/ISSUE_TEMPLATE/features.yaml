@@ -25,8 +25,3 @@ body:
       placeholder: Start journey here
     validations:
       required: true
-body:
-  - type: markdown
-  attributes:
-    value: |
-      Hello World
