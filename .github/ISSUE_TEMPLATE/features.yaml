@@ -26,7 +26,7 @@ body:
     validations:
       required: true
 body:
-  - type: markdown
+  - type: text
     attributes:
       value: |
         Thanks for taking the time to fill out this feature report!
