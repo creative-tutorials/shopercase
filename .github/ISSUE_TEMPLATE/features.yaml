@@ -25,11 +25,11 @@ body:
       placeholder: Start journey here
     validations:
       required: true
-- type: textarea
-    id: info
+ - type: checkboxes
+    id: terms
     attributes:
-      label: info
-      description: You can start by sharing an image or a video describing the feature
-      placeholder: Start journey here
-    validations:
-      required: true
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
