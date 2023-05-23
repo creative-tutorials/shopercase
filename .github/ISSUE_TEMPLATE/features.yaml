@@ -25,8 +25,11 @@ body:
       placeholder: Start journey here
     validations:
       required: true
-body:
-  - type: text
+ - type: none
+    id: terms
     attributes:
-      value: |
-        Thanks for taking the time to fill out this feature report!
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
