@@ -33,5 +33,3 @@ body:
       placeholder: Addition information
     validations:
       required: true
-- type: text
-    You can hello world
