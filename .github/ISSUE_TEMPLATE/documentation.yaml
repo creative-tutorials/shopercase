@@ -1,7 +1,7 @@
 name: 📄 Documentation issue
 description: Is there an issue in the documentation?
 title: "[DOCS]: "
-labels: ["📑text", "📑docs"]
+labels: ["documentation"]
 assignees:
   - octocat
 body:
