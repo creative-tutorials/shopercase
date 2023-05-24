@@ -1,7 +1,7 @@
 name: ✨ Feature Request
 description: File a bug report
 title: "[Feature]: "
-labels: ["✨features", "🛸addition"]
+labels: ["✨features", "enhancement"]
 assignees:
   - octocat
 body:
