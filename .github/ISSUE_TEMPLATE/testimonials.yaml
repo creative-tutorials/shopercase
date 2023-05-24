@@ -1,7 +1,7 @@
 name: 🤩 Testimonials
 description: What would you like to say about our platform
 title: "[NEW Testimonials]: "
-labels: ["tesimonials", "create-testimonials", "apply"]
+labels: ["tesimonials"]
 assignees:
   - octocat
 body:
