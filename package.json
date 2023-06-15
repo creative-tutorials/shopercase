@@ -1,6 +1,6 @@
 {
   "name": "shopercase",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -10,17 +10,17 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "13.4.2",
-    "@types/node": "20.1.3",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
+    "@next/font": "13.4.5",
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.12",
+    "@types/react-dom": "18.2.5",
     "@vercel/analytics": "^1.0.1",
     "crisp-sdk-web": "^1.0.18",
-    "eslint": "8.40.0",
-    "eslint-config-next": "13.4.2",
-    "next": "13.4.2",
+    "eslint": "8.42.0",
+    "eslint-config-next": "13.4.5",
+    "next": "13.4.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.4"
+    "typescript": "5.1.3"
   }
 }
