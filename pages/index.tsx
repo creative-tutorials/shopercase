@@ -80,18 +80,29 @@ export default function Home() {
           <div className={styles.sections}>
             <section id={styles.landingPage}>
               <div className={styles.center}>
-                <h1>
-                  Revolutionize Your Online Store
-                </h1>
+                <h1>Revolutionize Your Online Store</h1>
                 <p>
                   Improve the way you run your business with just a simple
                   click, <br /> manage your sales with our simple bookkeeping
                   system
                 </p>
                 <div className={styles.buttons}>
-                  <button id={styles.book}><Link href={"https://docs.google.com/forms/d/e/1FAIpQLSdNxVXj6qMIfSXttUw6dDmo-EKXaK_dSL0PFaTia97RA_t0XA/viewform"}>Book demo</Link></button>
+                  <button id={styles.book}>
+                    <Link
+                      href={
+                        "https://docs.google.com/forms/d/e/1FAIpQLSdNxVXj6qMIfSXttUw6dDmo-EKXaK_dSL0PFaTia97RA_t0XA/viewform"
+                      }
+                    >
+                      Book demo
+                    </Link>
+                  </button>
                   <button id={styles.watch}>
-                    <Link href={"https://twitter.com/i/status/1669660678913769473"} target="_blank"><i className="fa-solid fa-circle-play"></i> Watch video</Link>
+                    <Link
+                      href={"https://twitter.com/i/status/1669660678913769473"}
+                      target="_blank"
+                    >
+                      <i className="fa-solid fa-circle-play"></i> Watch video
+                    </Link>
                   </button>
                 </div>
                 <div className={styles.stacks}>
@@ -306,10 +317,14 @@ export default function Home() {
                 </p>
                 <div className={styles.buttons}>
                   <button id={styles.book}>
-                    <Link href="https://github.com/creative-tutorials/shopercase/discussions"><i className="fa-brands fa-github"></i> Github discussion</Link>
+                    <Link href="https://github.com/creative-tutorials/shopercase/discussions">
+                      <i className="fa-brands fa-github"></i> Github discussion
+                    </Link>
                   </button>
                   <button id={styles.watch}>
-                    <Link href={"https://discord.gg/wjSvMhEcGv"}><i className="fa-brands fa-discord"></i> Discord</Link>
+                    <Link href={"https://discord.gg/wjSvMhEcGv"}>
+                      <i className="fa-brands fa-discord"></i> Discord
+                    </Link>
                   </button>
                 </div>
               </div>
@@ -318,7 +333,15 @@ export default function Home() {
               <div className={styles.center}>
                 <h1>Tired of old e-commerce platforms</h1>
                 <div className={styles.buttons}>
-                  <button id={styles.book}><Link href={"https://docs.google.com/forms/d/e/1FAIpQLSdNxVXj6qMIfSXttUw6dDmo-EKXaK_dSL0PFaTia97RA_t0XA/viewform"}>Book demo</Link></button>
+                  <button id={styles.book}>
+                    <Link
+                      href={
+                        "https://docs.google.com/forms/d/e/1FAIpQLSdNxVXj6qMIfSXttUw6dDmo-EKXaK_dSL0PFaTia97RA_t0XA/viewform"
+                      }
+                    >
+                      Book demo
+                    </Link>
+                  </button>
                 </div>
               </div>
             </section>
@@ -326,6 +349,14 @@ export default function Home() {
               <div className={styles.ft3_cy}>
                 <div className={styles.cy_left}>
                   <p>&copy; 2023 Shopercase - All rights reserved</p>
+                  <div className={styles.systemstatus}>
+                    <iframe
+                      src="https://shopercase.instatus.com/embed-status/831b04cd/dark-sm"
+                      width="230"
+                      height="61"
+                      style={{border: "none"}}
+                    ></iframe>
+                  </div>
                 </div>
                 <div className={styles.cy_right}>
                   <Link href="https://github.com/creative-tutorials/shopercase">

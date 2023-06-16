@@ -270,6 +270,9 @@
   padding: 45px;
   margin-top: 3.5rem;
 }
+.systemstatus {
+  margin-top: 1rem;
+}
 .ft3_cy {
   display: flex;
   justify-content: space-between;
