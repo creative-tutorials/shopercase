@@ -29,17 +29,17 @@ export default function Home() {
         </title>
         <meta
           name="description"
-          content="Shop smarter, not harder - with the ultimate shopping destination, Shopercase!"
+          content="Revolutionize Your Online Store with Shopercase"
         />
         <meta
           property="og:title"
-          content="Shop smarter, not harder - with the ultimate shopping destination, Shopercase!"
+          content="Revolutionize Your Online Store with Shopercase!"
         />
         <meta
           property="og:description"
-          content="Shop smarter, not harder - with the ultimate shopping destination, Shopercase!"
+          content="Revolutionize Your Online Store with Shopercase"
         />
-        <meta property="og:url" content="https://snipcart.com/" />
+        <meta property="og:url" content="https://shopercase.vercel.app/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div id={styles.App}>
