@@ -56,9 +56,9 @@ export default function Home() {
                   />
                 </div>
                 <div className={styles.m_Links}>
-                  <Link href="/">Docs</Link>
-                  <Link href="/">Blog</Link>
-                  <Link href="/">About</Link>
+                  <Link href="/docs">Docs</Link>
+                  <Link href="/blog">Blog</Link>
+                  <Link href="/about">About</Link>
                 </div>
               </div>
               <div className={styles.hright}>
@@ -81,10 +81,7 @@ export default function Home() {
             <section id={styles.landingPage}>
               <div className={styles.center}>
                 <h1>
-                  Revolutionize Your Online Store with Shopercase: <br />{" "}
-                  <span id={styles.highlight}>
-                    Unleash the Power of Seamless E-commerce
-                  </span>
+                  Revolutionize Your Online Store
                 </h1>
                 <p>
                   Improve the way you run your business with just a simple
@@ -331,10 +328,10 @@ export default function Home() {
                   <p>&copy; 2023 Shopercase - All rights reserved</p>
                 </div>
                 <div className={styles.cy_right}>
-                  <Link href="/">
+                  <Link href="https://github.com/creative-tutorials/shopercase">
                     <i className="fa-brands fa-github"></i>
                   </Link>
-                  <Link href="/">
+                  <Link href="https://twitter.com/treasuredev_">
                     <i className="fa-brands fa-twitter"></i>
                   </Link>
                 </div>
@@ -350,9 +347,9 @@ export default function Home() {
                 ></i>
               </div>
               <div className={styles.oLink}>
-                <Link href="/">Docs</Link>
-                <Link href="/">Blog</Link>
-                <Link href="/">About</Link>
+                <Link href="/docs">Docs</Link>
+                <Link href="/blog">Blog</Link>
+                <Link href="/about">About</Link>
               </div>
               <div className={styles.ie3}>
                 <Link href="https://github.com/creative-tutorials/shopercase">
