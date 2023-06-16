@@ -91,7 +91,7 @@ export default function Home() {
                 <div className={styles.buttons}>
                   <button id={styles.book}>Book demo</button>
                   <button id={styles.watch}>
-                    <i className="fa-solid fa-circle-play"></i> Watch video
+                    <Link href={"https://twitter.com/i/status/1669660678913769473"} target="_blank"><i className="fa-solid fa-circle-play"></i> Watch video</Link>
                   </button>
                 </div>
                 <div className={styles.stacks}>

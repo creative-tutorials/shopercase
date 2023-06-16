@@ -104,6 +104,10 @@
   cursor: pointer;
   border: 2px solid #3960d7;
 }
+.buttons button a {
+  color: #fff;
+  text-decoration: none;
+}
 .buttons button:hover {
   background-color: #3a61d9;
   border: 2px solid #3d65db;
