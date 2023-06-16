@@ -306,10 +306,10 @@ export default function Home() {
                 </p>
                 <div className={styles.buttons}>
                   <button id={styles.book}>
-                    <i className="fa-brands fa-github"></i> Github discussion
+                    <Link href="https://github.com/creative-tutorials/shopercase/discussions"><i className="fa-brands fa-github"></i> Github discussion</Link>
                   </button>
                   <button id={styles.watch}>
-                    <i className="fa-brands fa-discord"></i> Discord
+                    <Link href={"https://discord.gg/wjSvMhEcGv"}><i className="fa-brands fa-discord"></i> Discord</Link>
                   </button>
                 </div>
               </div>
@@ -318,7 +318,7 @@ export default function Home() {
               <div className={styles.center}>
                 <h1>Tired of old e-commerce platforms</h1>
                 <div className={styles.buttons}>
-                  <button id={styles.book}>Book demo</button>
+                  <button id={styles.book}><Link href={"https://docs.google.com/forms/d/e/1FAIpQLSdNxVXj6qMIfSXttUw6dDmo-EKXaK_dSL0PFaTia97RA_t0XA/viewform"}>Book demo</Link></button>
                 </div>
               </div>
             </section>
