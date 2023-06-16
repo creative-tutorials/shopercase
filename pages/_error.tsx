@@ -6,7 +6,7 @@ const Custom404: NextPage = () => {
   return (
     <>
      <Head>
-        <title>404: This page could not be founds</title>
+        <title>404 - This page could not be founds</title>
         <meta
           name="description"
           content="Shop smarter, not harder - with the ultimate shopping destination, Shopercase!"
@@ -25,7 +25,7 @@ const Custom404: NextPage = () => {
       <div className={newstyle.pager}>
         <div className={newstyle.pagerwrapper}>
           <h1>404</h1>
-          <p>This page could not be found.</p>
+          <p>This page could not be found</p>
         </div>
       </div>
     </>

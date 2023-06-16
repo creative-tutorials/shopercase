@@ -126,6 +126,7 @@
 #section2 {
   padding: 45px;
   margin-top: 3.5rem;
+  border-top: 1px solid #2c343e;
 }
 #section2 .center h1 {
   font-size: 2.4rem;
@@ -183,6 +184,7 @@
 #section3 {
   padding: 45px;
   margin-top: 3.5rem;
+  border-top: 1px solid #2c343e;
 }
 #section3 .center p {
   font-size: 1rem;
@@ -208,6 +210,7 @@
 #section4 {
   padding: 45px;
   margin-top: 3.5rem;
+  border-top: 1px solid #2c343e;
 }
 #section4 .center p {
   font-size: 1rem;
@@ -215,6 +218,7 @@
 #section5 {
   padding: 45px;
   margin-top: 3.5rem;
+  border-top: 1px solid #2c343e;
 }
 #section5 .center p {
   font-size: 1rem;
@@ -252,6 +256,7 @@
 #section6 {
   padding: 45px;
   margin-top: 3.5rem;
+  border-top: 1px solid #2c343e;
 }
 #section6 .buttons {
   display: block;
@@ -277,68 +282,7 @@
   font-size: 1.8rem;
   color: #c0cbda;
 }
-/* @media screen and (max-width: 863px) {
-  .center h1 {
-    font-size: 2.2rem;
-  }
-  .center p {
-    font-size: 1rem;
-    line-height: 1.6rem;
-  }
-  .buttons button {
-    font-size: 0.9rem;
-  }
-  #section2 .center h1 {
-    font-size: 2rem;
-  }
-  .ebx_3 {
-    width: 100%;
-    max-width: none;
-  }
-  #section3 .center h1 {
-    font-size: 2rem;
-  }
-  #section3 .center p {
-    font-size: 0.9rem;
-  }
-  .fl3_gg {
-    width: 100%;
-    max-width: none;
-  }
-  #section5 .center h1 {
-    font-size: 1.7rem;
-  }
-  #section5 .center p {
-    font-size: 1rem;
-  }
-  .y3_ch3 span {
-    font-size: 0.8rem;
-  }
-  .y3_ch3 h3 {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-  }
-  #section4 .center h1 {
-    font-size: 1.7rem;
-  }
-  #section4 .center p {
-    font-size: 1rem;
-  }
-  #section6 .center h1 {
-    font-size: 1.6rem;
-  }
-  .center .buttons {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .buttons button {
-    font-size: 1rem;
-  }
-} */
+
 .menu {
   display: none;
 }

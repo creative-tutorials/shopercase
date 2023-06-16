@@ -7,6 +7,8 @@
 .pagerwrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 .pagerwrapper h1 {
@@ -18,4 +20,9 @@
 }
 .pagerwrapper p {
   color: #fff;
+}
+@media screen and (max-width: 313px) {
+  .pagerwrapper h1 {
+    border-right: 1px solid transparent;
+  }
 }
