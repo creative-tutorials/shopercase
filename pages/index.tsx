@@ -89,7 +89,7 @@ export default function Home() {
                   system
                 </p>
                 <div className={styles.buttons}>
-                  <button id={styles.book}>Book demo</button>
+                  <button id={styles.book}><Link href={"https://docs.google.com/forms/d/e/1FAIpQLSdNxVXj6qMIfSXttUw6dDmo-EKXaK_dSL0PFaTia97RA_t0XA/viewform"}>Book demo</Link></button>
                   <button id={styles.watch}>
                     <Link href={"https://twitter.com/i/status/1669660678913769473"} target="_blank"><i className="fa-solid fa-circle-play"></i> Watch video</Link>
                   </button>
