@@ -55,3 +55,18 @@
 .blogSection a {
   text-decoration: none;
 }
+@media screen and (max-width:690px) {
+  .wrapper .min32 h1 {
+    font-size: 3rem;
+  }
+  .wrapper .min32 p {
+    font-size: 1rem;
+  }
+  .content #title {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+  }
+  .content #description {
+    font-size: 0.9rem;
+  }
+}
