@@ -47,8 +47,10 @@ export default function GetStartedBlog() {
               <div className={str.blogContent}>
                 <p>
                   In this blog post we&apos; be looking on how to setup and use
-                  Shopercase, <br /> We will learn what shopercase is and how to
-                  get it setup in minutes.
+                  Shopercase, We will learn what shopercase <br /> is and how to
+                  get it setup in minutes. We will guide you through the
+                  key features of Shopercase and <br /> provide step-by-step
+                  instructions to help you make the most out of our platform.
                 </p>
               </div>
             </div>
