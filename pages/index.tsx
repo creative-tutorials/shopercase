@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
@@ -17,6 +17,8 @@ const Australia = lazy(() => import("../components/icons/flags/australia"));
 const React = lazy(() => import("../components/icons/tech/react"));
 const MongoDB = lazy(() => import("../components/icons/tech/mongodb"));
 const Supabase = lazy(() => import("../components/icons/tech/supabase"));
+// import { Header } from "../components/element/Header";
+const Header = lazy(() => import('../components/element/Header').then(module => ({ default: module.Header })));
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -25,7 +27,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Shopercase | Revolutionize Your Online Store with Shopercase:
+          Shopercase | Revolutionize Your Online Store with Shopercase
         </title>
         <meta
           name="description"
@@ -44,39 +46,7 @@ export default function Home() {
       </Head>
       <div id={styles.App}>
         <div className={styles.container}>
-          <div className={styles.header}>
-            <div className={styles.hCol}>
-              <div className={styles.hleft}>
-                <div className={styles.Logo}>
-                  <Image
-                    src="/icons/ShoperFrame.png"
-                    width={35}
-                    height={35}
-                    alt="Shopercase Logo"
-                  />
-                </div>
-                <div className={styles.m_Links}>
-                  <Link href="/docs">Docs</Link>
-                  <Link href="/blog">Blog</Link>
-                  <Link href="/about">About</Link>
-                </div>
-              </div>
-              <div className={styles.hright}>
-                <div className={styles.str}>
-                  <Link href="https://github.com/creative-tutorials/shopercase">
-                    <i className="fa-solid fa-star fa-2xs"></i> Star us on
-                    GitHub
-                  </Link>
-                </div>
-                <div className={styles.menu}>
-                  <i
-                    className="fa-solid fa-bars"
-                    onClick={() => setIsOpen(true)}
-                  ></i>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Header styles={styles} setIsOpen={setIsOpen} Link={Link} />
           <div className={styles.sections}>
             <section id={styles.landingPage}>
               <div className={styles.center}>
@@ -354,7 +324,7 @@ export default function Home() {
                       src="https://shopercase.instatus.com/embed-status/831b04cd/dark-sm"
                       width="230"
                       height="61"
-                      style={{border: "none"}}
+                      style={{ border: "none" }}
                     ></iframe>
                   </div>
                 </div>
@@ -394,3 +364,5 @@ export default function Home() {
     </>
   );
 }
+
+

@@ -1,0 +1,35 @@
+.wrapper {
+  margin-top: 6rem;
+  padding: 45px 95px;
+}
+.bc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.blogHeader_content h1 {
+  font-size: 2.4rem;
+  color: #eaeef3;
+  font-weight: 600;
+}
+.bhr_x3 {
+  display: flex;
+  margin-top: 0.6rem;
+  gap: 1rem;
+}
+.bhr_x3 li:nth-child(1) {
+  list-style-type: none;
+}
+.bhr_x3 li {
+  color: #9da4ae;
+  font-size: 0.9rem;
+}
+.blogHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.blogContent p {
+  color: #DBE4EE;
+}
