@@ -99,4 +99,8 @@
     color: rgb(178, 197, 254);
     font-style: italic;
   }
+  .wrapper {
+    margin-top: 6rem;
+    padding: 45px;
+  }
 }
