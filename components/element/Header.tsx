@@ -1,5 +1,11 @@
 import Image from "next/image";
-export function Header({ styles, setIsOpen, Link }:any) {
+import { Dispatch, SetStateAction } from "react";
+interface typeComp {
+  Link: any;
+  styles: any;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+}
+export default function Header({ styles, setIsOpen, Link }: any) {
   return (
     <div className={styles.header}>
       <div className={styles.hCol}>

@@ -17,8 +17,9 @@ const Australia = lazy(() => import("../components/icons/flags/australia"));
 const React = lazy(() => import("../components/icons/tech/react"));
 const MongoDB = lazy(() => import("../components/icons/tech/mongodb"));
 const Supabase = lazy(() => import("../components/icons/tech/supabase"));
-// import { Header } from "../components/element/Header";
-const Header = lazy(() => import('../components/element/Header').then(module => ({ default: module.Header })));
+
+import Header from "../components/element/Header";
+import OpenMenu from "../components/element/openMenu";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -139,9 +140,9 @@ export default function Home() {
                     >
                       <path
                         fill="#808996"
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6zm10 2a1 1 0 1 0-2 0v8a1 1 0 1 0 2 0V8zm-4 3a1 1 0 1 0-2 0v5a1 1 0 1 0 2 0v-5zm8 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       />
                     </svg>
                     <p>Realtime Analytics</p>
@@ -340,29 +341,10 @@ export default function Home() {
             </footer>
           </div>
           {isOpen && (
-            <div className={styles.openMenu}>
-              <div className={styles.opClose}>
-                <i
-                  className="fa-solid fa-xmark"
-                  onClick={() => setIsOpen(false)}
-                ></i>
-              </div>
-              <div className={styles.oLink}>
-                <Link href="/docs">Docs</Link>
-                <Link href="/blog">Blog</Link>
-                <Link href="/about">About</Link>
-              </div>
-              <div className={styles.ie3}>
-                <Link href="https://github.com/creative-tutorials/shopercase">
-                  <i className="fa-solid fa-star fa-2xs"></i> Star us on GitHub
-                </Link>
-              </div>
-            </div>
+            <OpenMenu setIsOpen={setIsOpen} />
           )}
         </div>
       </div>
     </>
   );
 }
-
-

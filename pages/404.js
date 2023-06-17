@@ -1,8 +1,7 @@
 import React from "react";
-import { NextPage } from "next";
 import newstyle from "../styles/notfound.module.css";
 import Head from "next/head";
-const Custom404: NextPage = () => {
+const Custom404 = () => {
   return (
     <>
      <Head>

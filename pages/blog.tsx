@@ -4,11 +4,8 @@ import { lazy, useState } from "react";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
-const Header = lazy(() =>
-  import("../components/element/Header").then((module) => ({
-    default: module.Header,
-  }))
-);
+import Header from "../components/element/Header";
+import OpenMenu from "../components/element/openMenu";
 export default function Blog() {
   const [isOpen, setIsOpen] = useState(false);
   const pinnedBlog = "/blogs/pinned.png";
@@ -45,7 +42,7 @@ export default function Blog() {
                 <div className={blgs.content_wrapper}>
                   <div className={blgs.tags}>
                     <li>17 June 2023</li>
-                    <li>1 minutes read</li>
+                    <li>2 minutes read</li>
                   </div>
                   <div className={blgs.content}>
                     <h1 id={blgs.title}>Get Started with Shopercase</h1>
@@ -60,6 +57,7 @@ export default function Blog() {
             </Link>
           </div>
         </div>
+        {isOpen && <OpenMenu setIsOpen={setIsOpen} />}
       </div>
     </>
   );
